@@ -1,0 +1,3 @@
+ Password: uGseAbTS4UCEHoNOeeNR
+
+HTTP interface which is on port 9200

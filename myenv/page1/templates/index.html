@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <title>Diseases Search Engines </title>
+</head>
+<!--BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<body>
+
+<!-- --------------------   -->
+
+<div class="row">
+    <!-- DEBUT COLONNE DE L'HISTORIQUE DES REQUETES  -->
+    <div class="col-lg-2 d-none d-lg-block">
+        <div class="d-lg-block" style="min-width: 11em;">
+            <div class="d-lg-block container text-center mb-5 mt-8 mx-1" style="margin-left: 1em;">
+                <a class="" href="/">
+                    <img alt="..." src="/_next/static/media/phind_v2.45c8fa3b.svg" width="75" height="36" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
+                </a>
+            </div>
+            <div>
+                <div class="container p-0 mt-6">
+                    <div class="row">
+                        <div class="table-responsive" style="max-height: 70vh;">
+                            <table class="table darkmode-semi-light table-flush table-hover text-always-white border border-history-panel mb-7">
+                                <tbody>
+                                    <tr class=" table-active" style="cursor: pointer;">
+                                        <td class="">
+                                            <div class="row">
+                                                <div class="col-1 fs-5">
+
+                                                </div>
+                                                <div class="col-4 ">
+                                                    <i class="fe fe-edit m-1"></i>
+                                                    <i class="fe fe-trash m-1"></i>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-1 fs-5">
+
+                                                </div>
+                                                <div class="fs-6 col-10" style="overflow: hidden;">What is PWA?</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class=" " style="cursor: pointer;">
+                                        <td class="">
+                                            <div class="row">
+                                                <div class="col-1 fs-5">
+
+                                                </div>
+                                                <div class="col-4 ">
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-1 fs-5">
+
+                                                </div>
+                                                <div class="fs-6 col-10" style="overflow: hidden;">
+                                                    how to have a website preview on vscode
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+    <!-- FIN COLONNE DE L'HISTORIQUE DES REQUETES  -->
+    <!-- DEBUT COLONNE DE D'AFFICHAGE DES REPONSES   -->
+    
+            <div class="col-lg-10">
+                <div class="row mt-6 mx-auto">
+                    <div class=" container mb-5 mt-2 ">
+                        <a class="mx-auto" href="/index">
+                            <img alt="..." src="{% static 'logo.png' %}" width="100" height="100" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
+                        </a>
+                        <h1 class="mb-8  mt-5 mx-auto">Search Engine for<!-- --> <span class="text-underline-warning">Diseases</span>.</h1>
+                    </div>
+                      <!-- DEBUT Affichage de la question poser par l'utilisateur et le banner des boutons pour la recherche   -->
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="container-xl">
+                            <!-- <form class="mb-3">
+                                <div class="input-group shadow border-multicolor darkmode-light">
+                                    <textarea tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="q" class="form-control bg-white darkmode-light searchbox-textarea" rows="1" placeholder="" aria-label="" style="resize: none; height: 53px;">
+                                        QUESTION ?
+                                    </textarea>
+                                    <div class="btn-group shadow-none bg-white">
+                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
+                                            <i class="fe fe-x text-black"></i>
+                                        </button>
+                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
+                                            <i class="fe fe-chevron-down text-black">
+
+                                            </i>
+                                        </button>
+                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="submit">
+                                            <i class="fe fe-search text-black"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form> -->
+                            <div class="mt-4" style="display: flex; justify-content: space-between;">
+                               
+                                <div class="">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIN Affichage de la question poser par l'utilisateur et le banner des boutons pour la recherche   -->
+                </div>
+
+                <div name="answer-0" class="row">
+
+                    <!-- <div class="col-lg-8 col-xl-7">
+                        <div class="container-xl">
+                            <button class="btn btn-light btn-sm mt-4 mb-2" type="button" style="visibility: visible;">
+                                <i class="fe fe-square m-2"></i>
+                                Stop Generating
+                            </button>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="container-xl">
+                            <div class="mb-3 mx-auto">
+                                <h1 class="fw-bold fs-3 mb-3 text-center " style="white-space: pre-wrap; overflow-wrap: break-word; cursor: pointer;">
+                                    <!-- QUESTION -->
+                                    {{input_value}}
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-xl-4">
+                        <div class="container-xl">
+                            <span class="fw-bold fs-3 mb-3" style="white-space: pre-wrap; overflow-wrap: break-word; cursor: pointer;">
+                                DIALOGFLOW
+                            </span>
+                        </div>
+                    </div>
+                    <!-- DEBUT Affichage des reponses aux questions  -->
+                    <div class="col-lg-8 col-xl-7">
+                        <div class="container-xl">
+                            <div>
+                                <h5 class="text-uppercase">
+                                    <i>
+                                        <u>
+                                            Reponse| RDF 
+                                        </u>
+                                    </i>
+                                </h5>
+                                <div class="fs-5">
+                                    <p class="text-danger mb-3">
+                                       <strong></strong> 
+                                    </p>
+                                </div>
+                                   
+                                </div>
+
+                                    <!-- FIN Affichage des reponses aux questions  -->
+                                    
+                                    <div class="position-relative mt-4">
+                                        <div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+
+                                    </div>
+                                            <!-- DEBUT Nouvelle zone de saisie le question-->
+                                                <div class="fixed-bottom bg-gradient-light" style="pointer-events: none;">
+                                                    <div class="row">
+                                                        <div class="col-2">
+
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-7 custom-class" style="pointer-events: auto;">
+                                                            <div class="container">
+                                                                <form class="mb-3" method="post">
+                                                                    {% csrf_token %}
+                                                                    <div class="input-group shadow border-multicolor darkmode-light">
+                                                                        <!-- <textarea  rows="1" placeholder="Posez une question" aria-label="Posez une question" style="resize: none; height: 53px;">
+                                                                        </textarea> -->
+                                                                        <input id="input_value" name="input_value" tabindex="0" class="form-control bg-white darkmode-light searchbox-textarea" style="height: 53px;">
+                                                                        <div class="btn-group shadow-none bg-white">
+                                                                            <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
+                                                                                <i class="fe fe-chevron-down text-black"></i>
+                                                                            </button>
+                                                                            <button name="submit" tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="submit">
+                                                                                Recherche
+                                                                                <i class="fe fe-search text-black"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- FIN Affichage des reponses aux questions  -->
+                                            </div>
+                                        </div>
+                                                    
+
+                                                <!-- DEBUT DE ZONE D'AFFICHAGE DES REPONSES DE DIALOG FLOW -->
+                                                    <div class="col-lg-4 col-xl-4">
+                                                        <div class="container-xl">
+
+                                                            <div class="position-relative mb-3">
+                                                                <h5 class="text-uppercase d-inline mb-3 mt-3">
+                                                                    <i>
+                                                                        <u>
+                                                                            Reponse| DIALOGFLOW
+                                                                        </u>
+                                                                    </i>
+                                                                   
+                                                                
+                                                                </h5>
+                                                                
+                                                            <div>
+                                                                <div class="fs-5 mt-3 text-center">
+                                                                    <p class="text-black mb-3">
+                                                                        <!-- PWAs have several key features and benefits: -->
+                                                                        <span class="">
+                                                                            {{fulfillment_text }}
+                                                                            
+                                                                        </span> 
+                                                                    </p>
+                                                                </div>
+                                                               
+
+                                                                <!-- <div class="pb-2" style="opacity: 1;">
+                                                                    <div class="d-flex"><span style="margin-right: 10px;">
+                                                                        <img src="src.target.com" alt="favicon-www.techtarget.com" width="16" height="16">
+                                                                    </span>
+                                                                    <span class="fs-6 text-gray-600 text-truncate d-inline align-self-center">www.srctarget.com &gt; Header of the question</span>
+                                                                </div>
+                                                                <a target="_blank" class="mb-0" rel="noreferrer" href="src.target.com/fullLink">
+                                                                    Asked question that fit to the page? | Definition from TechTarget
+                                                                </a>
+                                                               
+                                                                </div> -->
+                                                            </div>
+                                                            <div>
+                                                               
+                                                            <!-- <div class="row mt-2">
+                                                                <div class="col-6">
+                                                                    <ul class="pagination">
+                                                                        <li class="page-item active">
+                                                                            <button class="page-link btn-light" type="button">1</button>
+                                                                        </li>
+                                                                        <li class="page-item ">
+                                                                            <button class="page-link btn-light" type="button">2</button>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div> -->
+
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- FIN DE ZONE D'AFFICHAGE DES REPONSES DE DIALOG FLOW  -->
+                                                    <div class="container-xl mt-4 align-items-end"></div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-14"></div>
+                                        </div>
+                                    </div>
+
+<!-- ------------------------------ -->
+</body>
+</html>
+

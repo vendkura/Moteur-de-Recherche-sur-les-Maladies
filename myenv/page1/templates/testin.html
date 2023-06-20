@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    <label for="input_value">Input value:</label>
+    <input type="text" id="input_value" name="input_value">
+    <button type="submit">Submit</button>
+</form>
+
+<h1>{{input_value}}</h1>
+<strong>{{ fulfillment_text }}</strong> 
