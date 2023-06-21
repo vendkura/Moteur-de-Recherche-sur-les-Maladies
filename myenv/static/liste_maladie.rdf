@@ -29,6 +29,15 @@
     <ex:hasSymptom>Écoulement nasal</ex:hasSymptom>
 </rdf:Description>
 
+ <rdf:Description rdf:about="http://www.example.com/Flu">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Qu'est ce que la grippe</rdfs:label>
+    <rdfs:comment>La grippe, communément appelée "la flu", est une infection virale qui affecte le système respiratoire.</rdfs:comment>
+    <ex:hasSymptom>Toux</ex:hasSymptom>
+    <ex:hasSymptom>Fièvre</ex:hasSymptom>
+    <ex:hasSymptom>Écoulement nasal</ex:hasSymptom>
+</rdf:Description>
+
 <!-- Maladie 2 -->
 <rdf:Description rdf:about="http://www.example.com/Diabetes">
     <rdf:type rdf:resource="http://www.example.com/Disease"/>
@@ -190,10 +199,27 @@
     <ex:hasSymptom>Ganglions lymphatiques enflés</ex:hasSymptom>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://www.example.com/HIV">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>SIDA</rdfs:label>
+    <rdfs:comment>Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, conduisant au développement du SIDA (Syndrome d'Immunodéficience Acquise).</rdfs:comment>
+    <ex:hasSymptom>Fièvre</ex:hasSymptom>
+    <ex:hasSymptom>Fatigue</ex:hasSymptom>
+    <ex:hasSymptom>Ganglions lymphatiques enflés</ex:hasSymptom>
+</rdf:Description>
 <!-- Maladie 18 -->
 <rdf:Description rdf:about="http://www.example.com/Autism">
     <rdf:type rdf:resource="http://www.example.com/Disease"/>
     <rdfs:label>Autisme</rdfs:label>
+    <rdfs:comment>Le trouble du spectre de l'autisme est une condition neurodéveloppementale caractérisée par des défis dans l'interaction sociale, la communication et les comportements répétitifs.</rdfs:comment>
+    <ex:hasSymptom>Difficulté avec les interactions sociales</ex:hasSymptom>
+    <ex:hasSymptom>Comportements ou intérêts répétitifs</ex:hasSymptom>
+    <ex:hasSymptom>Sensibilités sensorielles</ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Autism">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Qu'est ce que l'autisme</rdfs:label>
     <rdfs:comment>Le trouble du spectre de l'autisme est une condition neurodéveloppementale caractérisée par des défis dans l'interaction sociale, la communication et les comportements répétitifs.</rdfs:comment>
     <ex:hasSymptom>Difficulté avec les interactions sociales</ex:hasSymptom>
     <ex:hasSymptom>Comportements ou intérêts répétitifs</ex:hasSymptom>
@@ -236,6 +262,25 @@
 <rdf:Description rdf:about="http://www.example.com/lyme">
 	<rdf:type rdf:resource="http://www.example.com/Disease"/>
 	<rdfs:label>Maladie de lyme</rdfs:label>
+	<rdfs:comment>
+La maladie de Lyme, également dénommée borréliose de Lyme, est une zoonose transmise par des tiques. Elle est la maladie vectorielle la plus répandue dans tout l’hémisphère nord. Son incidence continue d'augmenter à l'échelle mondiale en raison d'une myriade de facteurs démographiques et environnementaux, y compris le changement climatique
+</rdfs:comment>
+	<ex:hasSymptom>
+La maladie évolue selon trois phases primaires, secondaires et tertiaire.
+La phase primaire est caractérisée par l’érythème migrant (plaque rouge sur la peau autour de la piqûre qui s’étend rapidement d’une taille supérieure ou égale à 5 cm) au point d’inoculation. Il s’agit de la manifestation la plus fréquente (environ 80% des cas).
+Si la maladie n’est pas traitée à ce stade précoce, et seulement dans ce cas, des complications neurologiques (paralysies, radiculites), articulaires (arthrites), cardiaques ou cutanées (acrodermatite chronique atrophiante) peuvent survenir lors des phases secondaire et tertiaire de la maladie.
+La phase secondaire débute quelques semaines après l’éruption cutanée. Son expression clinique varie cependant fortement d’un patient à l’autre. 
+La phase tertiaire est une phase disséminée tardive et correspond à une évolution chronique de la maladie. A ce stade, on observe principalement des manifestations articulaires, cutanées ou nerveuses.
+Même si la maladie n’est pas mortelle, en l’absence de traitement, elle peut laisser des séquelles handicapantes.
+L'érythème migrant est un marqueur diagnostique et aucun test de laboratoire supplémentaire n'est nécessaire. Le diagnostic dépend de l'évaluation clinique et est soutenu par des tests de laboratoire lors des phases secondaires et tertiaire de la borréliose. Le test ELISA (enzyme-linked immunosorbent assay) est généralement prescrit pour détecter les immunoglobulines dirigées contre les bactéries, et doit être suivi d'un Western Blot en cas de positivité.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/lyme">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Qu'est ce la maladie de lyme</rdfs:label>
 	<rdfs:comment>
 La maladie de Lyme, également dénommée borréliose de Lyme, est une zoonose transmise par des tiques. Elle est la maladie vectorielle la plus répandue dans tout l’hémisphère nord. Son incidence continue d'augmenter à l'échelle mondiale en raison d'une myriade de facteurs démographiques et environnementaux, y compris le changement climatique
 </rdfs:comment>
@@ -427,6 +472,20 @@ Les manifestations cliniques du paludisme sont très diverses. Le paludisme déb
 Dans les régions où le paludisme est hautement endémique, une partie de la population est porteuse asymptomatique. Suite à de nombreuses années d’infection chronique par le parasite, certains individus tolèrent sa présence et développent une immunité naturelle (« immunité acquise »).
 </ex:hasSymptom>
   </rdf:Description>
+ 
+
+<rdf:Description rdf:about="http://www.example.com/Paludisme">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Qu'est ce que le paludisme</rdfs:label>
+	<rdfs:comment>
+Le paludisme est une maladie provoquée par des parasites du genre Plasmodium. Selon l’Organisation mondiale de la santé (OMS), cette maladie a touché environ 241 millions de personnes dans le monde en 2020, et causé 627 000 décès. La situation est d’autant plus préoccupante que depuis plusieurs années les parasites développent des résistances aux molécules antipaludiques et les moustiques craignent de moins en moins les insecticides. Un vaccin existe désormais et est recommandé par l'OMS.
+</rdfs:comment>
+	<ex:hasSymptom>
+Les manifestations cliniques du paludisme sont très diverses. Le paludisme débute par une fièvre 8 à 30 jours après l’infection, qui peut s’accompagner - ou non - de maux de tête, de douleurs musculaires, d’un affaiblissement, de vomissements, de diarrhées, de toux. Des cycles typiques alternant fièvre, tremblements avec sueurs froides et transpiration intense, peuvent alors survenir : c’est " l’accès palustre". La périodicité de ces cycles dépend de l’espèce de parasite en cause, et coïncide avec la multiplication des parasites et l’éclatement des globules rouges, qui conduit également à l’anémie. Le paludisme engendré par P. falciparum peut être fatal s’il n’est pas traité. Dans certains cas, les globules rouges infectés peuvent obstruer les vaisseaux sanguins irriguant le cerveau : c’est le neuropaludisme, souvent mortel.
+Dans les régions où le paludisme est hautement endémique, une partie de la population est porteuse asymptomatique. Suite à de nombreuses années d’infection chronique par le parasite, certains individus tolèrent sa présence et développent une immunité naturelle (« immunité acquise »).
+</ex:hasSymptom>
+  </rdf:Description>
+  
 
  <rdf:Description rdf:about="http://www.example.com/Diabetes">
 	<rdf:type rdf:resource="http://www.example.com/Disease"/>
@@ -595,6 +654,19 @@ L’amélioration de l’accès à l’eau potable et les mesures d’hygiène g
 </ex:hasSymptom>
 </rdf:Description>
 
+<rdf:Description rdf:about="http://www.example.com/Choléra">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Qu'est ce que le choléra</rdfs:label>
+    <rdfs:comment>
+Le choléra est une maladie diarrhéique épidémique, strictement humaine, due à des bactéries appartenant aux sérogroupes O1 et O139 de l’espèce Vibrio cholerae. Ce bacille fût initialement observé par Pacini en 1854 puis isolé en 1883 par Robert Koch en Inde. La bactérie V. cholerae sérogroupe O1, biotype El Tor, est répandue sur toute la planète, qui subit actuellement la septième pandémie de choléra. L’Organisation mondiale de la santé estime à près de 3 millions le nombre de cas et à plus de 95 000 le nombre de décès dus à cette maladie chaque année dans le monde. Toutes les régions du monde déclarent des cas de choléra, l’Afrique est le continent le plus touché et concentre plus de 50% des cas. Le taux global de létalité a été de 1,8%, en 2016, mais a dépassé les 6% parmi les groupes vulnérables résidant dans des zones à haut risque.
+    </rdfs:comment>
+<ex:hasSymptom>
+Moins de 25% des personnes infectées développent des symptômes et de 10 à 20% d'entre elles vont déclarer une maladie sévère. L’incubation - de quelques heures à quelques jours - est suivie de violentes diarrhées et de vomissements, sans fièvre. En l’absence de traitement, dans ses manifestations les plus sévères, le choléra est l’une des maladies infectieuses les plus rapidement mortelles : la mort survient en 1 à 3 jours, par collapsus cardio-vasculaire dans 25 à 50% des cas. La mortalité est plus élevée chez les enfants, les personnes âgées et chez les individus fragilisés.
+Le traitement consiste essentiellement à compenser les pertes digestives d’eau et d’électrolytes. La réhydratation est assurée par voie orale ou par voie intraveineuse, selon le degré de déshydratation. L’amélioration est perceptible au bout de quelques heures et la guérison, sans séquelle, est obtenue en quelques jours.
+L’antibiothérapie est utile dans les cas graves, mais l’émergence de souches de vibrions cholériques multi-résistantes aux antibiotiques nécessite de tester la sensibilité aux antibiotiques sur un échantillon représentatif de souches isolées.  
+L’amélioration de l’accès à l’eau potable et les mesures d’hygiène générale sont essentielles dans la lutte contre le choléra, impliquant une véritable mobilisation sanitaire en cas d’épidémie, et un développement de l’éducation sanitaire dans les pays où le choléra sévit régulièrement. Mais il est prévisible que cette élévation du niveau d’hygiène ne sera pas réalisée avant plusieurs décennies dans les pays atteints par le choléra.
+</ex:hasSymptom>
+</rdf:Description>
 
 <rdf:Description rdf:about="http://www.example.com/Chikungunya">
     <rdf:type rdf:resource="http://www.example.com/Disease"/>

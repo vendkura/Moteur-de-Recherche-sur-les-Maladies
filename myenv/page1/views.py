@@ -19,7 +19,7 @@ def dialog_flow_prompt(session_id, prompt):
     # Set up credentials and API client
     file_path = os.path.join(BASE_DIR, 'static/api1.json')
     credentials = service_account.Credentials.from_service_account_file(file_path)
-    project_id = 'tuto1-avex'
+    project_id = 'tp-fop9'
     session_client = dialogflow.SessionsClient(credentials=credentials)
     language_code = 'fr'
 
@@ -94,7 +94,7 @@ def disease_info_view(request):
             file_path = os.path.join(BASE_DIR, 'static/liste_maladie.rdf')
             disease_info = query_disease_info(file_path, disease_name)
 
-            session_id = '102933083679047031424'
+            session_id = '106775527090109758675'
             fulfillment_text = dialog_flow_prompt(session_id, disease_name)
 
             # Pass the results to the template
