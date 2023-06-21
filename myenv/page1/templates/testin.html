@@ -1,9 +1,27 @@
-<form method="post">
-    {% csrf_token %}
-    <label for="input_value">Input value:</label>
-    <input type="text" id="input_value" name="input_value">
-    <button type="submit">Submit</button>
-</form>
-
-<h1>{{input_value}}</h1>
-<strong>{{ fulfillment_text }}</strong> 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Information</title>
+</head>
+<body>
+    <h1>Disease Information</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="disease_name">Disease Name:</label>
+        <input type="text" id="disease_name" name="disease_name" value="{{ disease_name }}" required>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if disease_info %}
+    <h2>{{ disease_info.Label }}</h2>
+    <p>{{ disease_info.Comment }}</p>
+    {% if disease_info.Symptom %}
+    <p>Symptom: {{ disease_info.Symptom }}</p>
+    {% endif %}
+    {% endif %}
+    {% if fulfillment_text %}
+    <h2>Dialogflow Response:</h2>
+    <p>{{ fulfillment_text }}</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:ex="http://www.example.com/">
+
+  <!-- Classe de maladie -->
+  <rdf:Description rdf:about="http://www.example.com/Disease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Disease</rdfs:label>
+    <rdfs:comment>A human disease.</rdfs:comment>
+  </rdf:Description>
+
+  <!-- Propriété de symptôme -->
+  <rdf:Description rdf:about="http://www.example.com/hasSymptom">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label>hasSymptom</rdfs:label>
+    <rdfs:comment>Indicates the symptoms associated with a disease.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Description>
+
+  <!-- Maladie 1 -->
+ <rdf:Description rdf:about="http://www.example.com/Flu">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Grippe</rdfs:label>
+    <rdfs:comment>La grippe, communément appelée "la flu", est une infection virale qui affecte le système respiratoire.</rdfs:comment>
+    <ex:hasSymptom>Toux</ex:hasSymptom>
+    <ex:hasSymptom>Fièvre</ex:hasSymptom>
+    <ex:hasSymptom>Écoulement nasal</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 2 -->
+<rdf:Description rdf:about="http://www.example.com/Diabetes">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Diabète</rdfs:label>
+    <rdfs:comment>Le diabète sucré est un trouble métabolique chronique caractérisé par des niveaux élevés de sucre dans le sang.</rdfs:comment>
+    <ex:hasSymptom>Mictions fréquentes</ex:hasSymptom>
+    <ex:hasSymptom>Soif accrue</ex:hasSymptom>
+    <ex:hasSymptom>Perte de poids inexpliquée</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 3 -->
+<rdf:Description rdf:about="http://www.example.com/Headache">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Maux de tête</rdfs:label>
+    <rdfs:comment>Les maux de tête sont un symptôme courant qui peut survenir pour diverses raisons, telles que la tension, la migraine ou des problèmes de sinus.</rdfs:comment>
+    <ex:hasSymptom>Douleur ou pression dans la tête</ex:hasSymptom>
+    <ex:hasSymptom>Sensibilité à la lumière ou au son</ex:hasSymptom>
+    <ex:hasSymptom>Naussées</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 4 -->
+<rdf:Description rdf:about="http://www.example.com/Allergy">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Allergie</rdfs:label>
+    <rdfs:comment>L'allergie est une réponse immunitaire anormale à des substances normalement inoffensives, entraînant des symptômes tels que des éternuements, des démangeaisons et des yeux larmoyants.</rdfs:comment>
+    <ex:hasSymptom>Éternuements</ex:hasSymptom>
+    <ex:hasSymptom>Démangeaisons ou yeux larmoyants</ex:hasSymptom>
+    <ex:hasSymptom>Nez qui coule ou nez bouché</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 5 -->
+<rdf:Description rdf:about="http://www.example.com/Asthma">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Asthme</rdfs:label>
+    <rdfs:comment>L'asthme est une affection respiratoire chronique caractérisée par une inflammation et un rétrécissement des voies respiratoires, entraînant des sifflements, des difficultés respiratoires et de la toux.</rdfs:comment>
+    <ex:hasSymptom>Sifflements</ex:hasSymptom>
+    <ex:hasSymptom>Difficulté à respirer</ex:hasSymptom>
+    <ex:hasSymptom>Toux, surtout la nuit ou tôt le matin</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 6 -->
+<rdf:Description rdf:about="http://www.example.com/Arthritis">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Arthrite</rdfs:label>
+    <rdfs:comment>L'arthrite désigne l'inflammation d'une ou plusieurs articulations, provoquant douleur, raideur et gonflement.</rdfs:comment>
+    <ex:hasSymptom>Douleur articulaire</ex:hasSymptom>
+    <ex:hasSymptom>Rigidité articulaire</ex:hasSymptom>
+    <ex:hasSymptom>Gonflement des articulations</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 7 -->
+<rdf:Description rdf:about="http://www.example.com/Hypertension">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Hypertension</rdfs:label>
+    <rdfs:comment>L'hypertension, ou tension artérielle élevée, est une condition dans laquelle la force du sang contre les parois des artères est trop élevée, pouvant entraîner diverses complications.</rdfs:comment>
+    <ex:hasSymptom>Lecture élevée de la tension artérielle</ex:hasSymptom>
+    <ex:hasSymptom>Maux de tête</ex:hasSymptom>
+    <ex:hasSymptom>Essoufflement</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 8 -->
+<rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Migraine</rdfs:label>
+    <rdfs:comment>La migraine est un type de mal de tête caractérisé par une douleur intense et lancinante, souvent d'un seul côté de la tête, accompagné d'autres symptômes tels que des nausées et une sensibilité à la lumière ou au bruit.</rdfs:comment>
+    <ex:hasSymptom>Douleur intense et lancinante, souvent d'un seul côté de la tête</ex:hasSymptom>
+    <ex:hasSymptom>Nausées ou vomissements</ex:hasSymptom>
+    <ex:hasSymptom>Sensibilité à la lumière ou au bruit</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 9 -->
+<rdf:Description rdf:about="http://www.example.com/Pneumonia">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Pneumonie</rdfs:label>
+    <rdfs:comment>La pneumonie est une infection qui inflamme les sacs d'air dans un ou les deux poumons, causant des symptômes tels que la toux, la fièvre et la difficulté à respirer.</rdfs:comment>
+    <ex:hasSymptom>Toux, souvent avec du mucus</ex:hasSymptom>
+    <ex:hasSymptom>Fièvre</ex:hasSymptom>
+    <ex:hasSymptom>Difficulté à respirer</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 10 -->
+<rdf:Description rdf:about="http://www.example.com/Depression">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Dépression</rdfs:label>
+    <rdfs:comment>La dépression est un trouble de l'humeur caractérisé par des sentiments persistants de tristesse, une perte d'intérêt ou de plaisir, ainsi que d'autres symptômes émotionnels et physiques.</rdfs:comment>
+    <ex:hasSymptom>Tristesse persistante ou humeur basse</ex:hasSymptom>
+    <ex:hasSymptom>Perte d'intérêt ou de plaisir pour les activités</ex:hasSymptom>
+    <ex:hasSymptom>Changements dans l'appétit ou le poids</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 11 -->
+<rdf:Description rdf:about="http://www.example.com/Anxiety">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Anxiété</rdfs:label>
+    <rdfs:comment>Les troubles anxieux sont un groupe de troubles mentaux caractérisés par une préoccupation, une peur et une anxiété excessives et persistantes, ainsi que des symptômes physiques associés.</rdfs:comment>
+    <ex:hasSymptom>Préoccupation excessive</ex:hasSymptom>
+    <ex:hasSymptom>Sentiment d'agitation ou d'irritabilité</ex:hasSymptom>
+    <ex:hasSymptom>Tachycardie</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 12 -->
+<rdf:Description rdf:about="http://www.example.com/Obesity">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Obésité</rdfs:label>
+    <rdfs:comment>L'obésité est une condition médicale caractérisée par un excès de poids corporel, souvent causé par une suralimentation et un mode de vie sédentaire.</rdfs:comment>
+    <ex:hasSymptom>Prise de poids</ex:hasSymptom>
+    <ex:hasSymptom>Augmentation de la graisse corporelle</ex:hasSymptom>
+    <ex:hasSymptom>Difficulté à l'activité physique</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 13 -->
+<rdf:Description rdf:about="http://www.example.com/CoronaryHeartDisease">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Maladie coronarienne</rdfs:label>
+    <rdfs:comment>La maladie coronarienne se produit lorsque les vaisseaux sanguins qui alimentent le cœur en sang deviennent étroits ou bloqués, entraînant des douleurs thoraciques et d'autres symptômes.</rdfs:comment>
+    <ex:hasSymptom>Douleur ou gêne thoracique</ex:hasSymptom>
+    <ex:hasSymptom>Essoufflement</ex:hasSymptom>
+    <ex:hasSymptom>Palpitations cardiaques</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 14 -->
+<rdf:Description rdf:about="http://www.example.com/Stroke">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Accident vasculaire cérébral</rdfs:label>
+    <rdfs:comment>L'accident vasculaire cérébral se produit lorsque l'apport sanguin à une partie du cerveau est interrompu ou réduit, entraînant des déficits neurologiques soudains tels que la paralysie, des difficultés d'élocution et de la confusion.</rdfs:comment>
+    <ex:hasSymptom>Engourdissement ou faiblesse soudaine du visage, du bras ou de la jambe, surtout d'un côté du corps</ex:hasSymptom>
+    <ex:hasSymptom>Difficulté à parler ou à comprendre la parole</ex:hasSymptom>
+    <ex:hasSymptom>Maux de tête sévères</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 15 -->
+<rdf:Description rdf:about="http://www.example.com/Cancer">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Cancer</rdfs:label>
+    <rdfs:comment>Le cancer fait référence à la croissance anormale de cellules qui peuvent envahir et détruire les tissus environnants. Cela peut causer un large éventail de symptômes selon l'organe ou le tissu affecté.</rdfs:comment>
+    <ex:hasSymptom>Perte de poids inexpliquée</ex:hasSymptom>
+    <ex:hasSymptom>Fatigue ou faiblesse</ex:hasSymptom>
+    <ex:hasSymptom>Douleur persistante</ex:hasSymptom>
+</rdf:Description>
+
+
+<!-- Maladie 16 -->
+<rdf:Description rdf:about="http://www.example.com/Osteoporosis">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Ostéoporose</rdfs:label>
+    <rdfs:comment>L'ostéoporose est une condition caractérisée par une faible densité osseuse et un risque accru de fractures.</rdfs:comment>
+    <ex:hasSymptom>Os fragiles</ex:hasSymptom>
+    <ex:hasSymptom>Douleur dorsale</ex:hasSymptom>
+    <ex:hasSymptom>Perte de hauteur au fil du temps</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 17 -->
+<rdf:Description rdf:about="http://www.example.com/HIV">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>VIH</rdfs:label>
+    <rdfs:comment>Le VIH (Virus de l'Immunodéficience Humaine) est un virus qui attaque le système immunitaire, conduisant au développement du SIDA (Syndrome d'Immunodéficience Acquise).</rdfs:comment>
+    <ex:hasSymptom>Fièvre</ex:hasSymptom>
+    <ex:hasSymptom>Fatigue</ex:hasSymptom>
+    <ex:hasSymptom>Ganglions lymphatiques enflés</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 18 -->
+<rdf:Description rdf:about="http://www.example.com/Autism">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Autisme</rdfs:label>
+    <rdfs:comment>Le trouble du spectre de l'autisme est une condition neurodéveloppementale caractérisée par des défis dans l'interaction sociale, la communication et les comportements répétitifs.</rdfs:comment>
+    <ex:hasSymptom>Difficulté avec les interactions sociales</ex:hasSymptom>
+    <ex:hasSymptom>Comportements ou intérêts répétitifs</ex:hasSymptom>
+    <ex:hasSymptom>Sensibilités sensorielles</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 19 -->
+<rdf:Description rdf:about="http://www.example.com/Alzheimer">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Maladie d'Alzheimer</rdfs:label>
+    <rdfs:comment>La maladie d'Alzheimer est un trouble neurologique progressif qui affecte la mémoire, la pensée et le comportement.</rdfs:comment>
+    <ex:hasSymptom>Perte de mémoire</ex:hasSymptom>
+    <ex:hasSymptom>Confusion</ex:hasSymptom>
+    <ex:hasSymptom>Difficulté à résoudre des problèmes</ex:hasSymptom>
+</rdf:Description>
+
+<!-- Maladie 20 -->
+<rdf:Description rdf:about="http://www.example.com/OvarianCancer">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Cancer de l'ovaire</rdfs:label>
+    <rdfs:comment>Le cancer de l'ovaire est un type de cancer qui se forme dans les ovaires, les organes reproducteurs féminins responsables de la production d'œufs.</rdfs:comment>
+    <ex:hasSymptom>Gonflement ou ballonnement abdominal</ex:hasSymptom>
+    <ex:hasSymptom>Douleur pelvienne</ex:hasSymptom>
+    <ex:hasSymptom>Changements dans les habitudes intestinales</ex:hasSymptom>
+</rdf:Description>
+
+
+<!--DEBUT KEVIN-->
+<rdf:Description rdf:about="http://www.example.com/Chagas">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Maladie de Chagas</rdfs:label>
+	<rdfs:comment> La maladie de Chagas est une infection parasitaire négligée. Elle est transmise par un insecte hématophage et sévit principalement sur le continent américain où plus de 100 millions de personnes sont exposées. L’infection peut prendre une forme chronique qui engendre des lésions irréversibles, et conduire au décès. Chaque année, la maladie de Chagas fait des milliers de victimes.  La maladie de Chagas est la maladie parasitaire de plus grande incidence socio-économique en Amérique latine.
+  </rdfs:comment>
+    <ex:hasSymptom>
+    Après une phase aiguë suivant l’infection, la maladie évolue vers la chronicité chez plus d’un tiers des personnes infectées. La phase chronique apparaît après 10 à 20 ans d’infection « silencieuse ». Des lésions irréversibles peuvent toucher le cœur, l’œsophage, le colon, et le système nerveux périphérique : 30% des personnes infectées souffrent de symptômes cardiaques (cardiopathies chroniques), qui peuvent conduire à la mort subite. Environ 10% des individus sont atteints de lésions chroniques de l’appareil digestif et 3% des personnes infectées ont des atteintes du système nerveux périphérique (troubles neurologiques).
+  </ex:hasSymptom>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/lyme">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Maladie de lyme</rdfs:label>
+	<rdfs:comment>
+La maladie de Lyme, également dénommée borréliose de Lyme, est une zoonose transmise par des tiques. Elle est la maladie vectorielle la plus répandue dans tout l’hémisphère nord. Son incidence continue d'augmenter à l'échelle mondiale en raison d'une myriade de facteurs démographiques et environnementaux, y compris le changement climatique
+</rdfs:comment>
+	<ex:hasSymptom>
+La maladie évolue selon trois phases primaires, secondaires et tertiaire.
+La phase primaire est caractérisée par l’érythème migrant (plaque rouge sur la peau autour de la piqûre qui s’étend rapidement d’une taille supérieure ou égale à 5 cm) au point d’inoculation. Il s’agit de la manifestation la plus fréquente (environ 80% des cas).
+Si la maladie n’est pas traitée à ce stade précoce, et seulement dans ce cas, des complications neurologiques (paralysies, radiculites), articulaires (arthrites), cardiaques ou cutanées (acrodermatite chronique atrophiante) peuvent survenir lors des phases secondaire et tertiaire de la maladie.
+La phase secondaire débute quelques semaines après l’éruption cutanée. Son expression clinique varie cependant fortement d’un patient à l’autre. 
+La phase tertiaire est une phase disséminée tardive et correspond à une évolution chronique de la maladie. A ce stade, on observe principalement des manifestations articulaires, cutanées ou nerveuses.
+Même si la maladie n’est pas mortelle, en l’absence de traitement, elle peut laisser des séquelles handicapantes.
+L'érythème migrant est un marqueur diagnostique et aucun test de laboratoire supplémentaire n'est nécessaire. Le diagnostic dépend de l'évaluation clinique et est soutenu par des tests de laboratoire lors des phases secondaires et tertiaire de la borréliose. Le test ELISA (enzyme-linked immunosorbent assay) est généralement prescrit pour détecter les immunoglobulines dirigées contre les bactéries, et doit être suivi d'un Western Blot en cas de positivité.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Maladiedusommeil">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Maladie du sommeil</rdfs:label>
+	<rdfs:comment>
+La maladie du sommeil, aussi appelée trypanosomose humaine africaine, est due à la présence d’un parasite flagellé (Trypanosoma brucei), injecté dans l’organisme par la mouche tsé-tsé. Elle sévit exclusivement dans 36 pays d’Afrique subsaharienne où l’on trouve les mouches tsé-tsé. Grâce à la lutte menée contre la maladie, le nombre de cas est en baisse depuis les années 90. Actuellement, bien que 70 millions de personnes vivent en zones à risques, on ne compte que moins d’un millier de nouveaux cas par an. Toutefois, le relâchement de la surveillance pourrait s’accompagner d’une remontée du nombre de cas, comme celle observée récemment en Guinée suite à l’épidémie d’Ebola en 2013.
+</rdfs:comment>
+	<ex:hasSymptom>
+Durant la première phase de la maladie, les parasites présents dans le sang provoquent de multiples symptômes qui rendent difficile l’établissement du diagnostic : fièvre, maux de tête, fatigue, inflammation des ganglions lymphatiques, ... Si la maladie n’est pas traitée, les parasites en viennent à envahir le système nerveux central. Durant cette seconde phase, des caractéristiques du cycle veille/sommeil apparaissent. Cette détérioration du système nerveux est toujours fatale en absence de traitement.   
+
+98% des cas sont dus au Trypanosoma brucei gambiense qui provoque une infection chronique : une personne peut être infectée pendant des mois, voire des années sans présenter de symptômes graves. Quand les symptômes sont attribués à la maladie, celle-ci est souvent déjà à un stade avancé et le système nerveux central est atteint.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+</rdf:Description>
+
+
+
+  <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>parkinson</rdfs:label>
+	<rdfs:comment>
+La maladie de Parkinson est une affection chronique dégénérative qui touche près de 200 000 personnes. Deuxième cause de handicap moteur chez l’adulte après les accidents vasculaires cérébraux, elle se caractérise par une disparition progressive de certains neurones dans le cerveau. Contrairement à une idée reçue, la maladie de Parkinson n’est pas l’apanage des personnes âgées puisque 17% des patients ont moins de 50 ans. Cette affection provoque des difficultés motrices importantes comme le ralentissement des gestes ou des tremblements caractéristiques. Bien que l’âge soit le principal facteur de risque, les causes exactes de la dégénérescence des neurones restent encore incertaines. Les traitements actuels peuvent améliorer les symptômes mais ne ralentissent pas l’évolution de la maladie.
+</rdfs:comment>
+	<ex:hasSymptom>
+La maladie de Parkinson est caractérisée par la destruction des neurones à dopamine (une molécule qui contrôle la communication entre les neurones) dans la substance noire du cerveau. Cette région du cerveau est indispensable au contrôle des mouvements. C’est pourquoi la maladie de Parkinson est d’abord une maladie qui touche les fonctions motrices.
+En plus de la destruction de ces cellules, des réseaux de neurones qui leur sont associés se perturbent dans d’autres régions cérébrales : noyau sous thalamique, striatum et thalamus. Récemment, une protéine (l’alpha-synucléine) a également été identifiée, sous sa forme « malade », comme capable de déclencher, à elle seule, le phénomène de neurodégénérescence.
+Pour autant les causes exactes de la maladie de Parkinson ne sont pas certaines car les mécanismes qui provoquent la dégénérescence des neurones sont multiples
+</ex:hasSymptom>
+	<ex:hasSymptom>
+La maladie de Parkinson repose sur la présence de trois principaux symptômes :
+● les tremblements : ils surviennent au repos et affectent surtout les membres supérieurs. Ils touchent environ 70% des patients et sont intermittents ;
+● l’akinésie : c’est une lenteur dans l’exécution et la coordination des mouvements. Ce symptôme affecte surtout la marche ;
+● l’hypertonie : elle se caractérise par une forte rigidité des membres. Elle est souvent responsable d’une position penchée vers l’avant et touche l’ensemble des muscles du corps. D’autres signes, non moteurs, sont également des manifestations de la maladie de Parkinson et résultent de l’impact de la maladie sur d’autres structures du cerveau :
+● Troubles du sommeil
+● Anosmie
+● Douleurs
+● Troubles intestinaux
+● Dépression
+● Troubles de l’équilibre
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>shigellose</rdfs:label>
+	<rdfs:comment>
+La shigellose est une maladie diarrhéique très contagieuse, responsable d’épidémies à travers le monde. En France de petites épidémies sont régulièrement rapportées dans les écoles. Une augmentation inquiétante du nombre de cas au sein de la communauté homosexuelle masculine a également été observée ces dernières années. Dans les régions tropicales et dans de nombreux pays en développement, la shigellose est endémique toute l’année, avec des poussées épidémiques à certaines saisons ou lors de désastres humanitaires. La shigellose tue environ 200 000 personnes dans le monde par an, dont 65 000 enfants de moins de 5 ans. Au-delà de la mortalité, son haut potentiel épidémique, l’émergence de résistance aux antibiotiques et la morbidité liée aux conséquences à long terme dues à des infections récurrentes constituent un problème majeur de santé publique.
+</rdfs:comment>
+	<ex:hasSymptom>
+La forme dysentérique aiguë typique de l’adulte débute brusquement, après une incubation brève. Elle se caractérise par des douleurs abdominales souvent accompagnées de vomissements et l’émission de selles très fréquentes et nombreuses, glairo-sanglantes et purulentes, voire parfois hémorragiques. La fièvre est élevée, avec altération de l’état général.
+Des complications peuvent émailler l’évolution de la maladie, surtout chez le nourrisson et le jeune enfant ; elles en causent les formes graves qui peuvent aboutir à la mort du patient et sont de plusieurs ordres.
+Les complications aiguës dominées par :
+une hypoglycémie, des bactériémies ou des septicémies à point de départ intestinal pouvant se compliquer de choc septique
+une déshydratation due à la fièvre et à l’abondance des pertes hydro-électrolytiques de la diarrhée, menant au collapsus et à l’insuffisance rénale aiguë
+un syndrome hémolytique et urémique, une insuffisance rénale aiguë de cause complexe, le plus souvent mortelle en l’absence de possibilités rapides de réanimation
+un mégacôlon toxique, une occlusion intestinale pouvant se compliquer de perforation avec péritonite.
+Les complications chroniques sont dominées par un état prolongé de malnutrition avec retard staturo-pondéral sévère chez les jeunes enfants.
+</ex:hasSymptom>
+</rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>sepsis</rdfs:label>
+	<rdfs:comment>
+Le sepsis est le terme anglo-saxon et international employé pour caractériser une réponse inflammatoire généralisée associée à une infection grave. Le terme septicémie, créé en 1837 par le médecin français Pierre Piorry, à partir des mots grecs « Σήψις » (sêptikós), putrefaction, et « αίμα » (haîma), sang, désigne la présence de bactéries (voire de champignons ou de virus) dans le sang. Le sepsis affecte principalement les individus déjà fragilisés, les nouveau-nés et les personnes âgées, mais peut atteindre des personnes sans affection préalable. Au niveau mondial, on estime à 11 millions le nombre de décès par an des suites d’un sepsis. Les projections dans l’avenir suggèrent un doublement du nombre de cas d’ici cinquante ans, en particulier en raison du vieillissement de la population.
+</rdfs:comment>
+	<ex:hasSymptom>
+En 2002, le sepsis a été défini comme syndrome caractérisé par une réponse inflammatoire généralisée d’origine infectieuse. En 2016, la définition a été revisitée, et aujourd’hui le sepsis est considéré comme un dysfonctionnement d'organes potentiellement mortel, résultant d’une réponse dérégulée de l'hôte à l'infection, et dont la forme la plus grave est le choc septique.
+
+Le sepsis s’accompagne d’une production exacerbée de médiateurs inflammatoires. On parle par exemple d’un « orage cytokinique » pour évoquer la production massive de cytokines (médiateurs chimiques qui permettent la communication entre nos cellules), qui affectent le fonctionnement des organes vitaux de manière aigue, et peuvent entrainer des séquelles fonctionnelles à plus long terme. Ainsi, environ 25% des patients qui survivent à un sepsis présentent des altérations cognitives plus de 3 mois après.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>sarcome de Kaposi</rdfs:label>
+	<rdfs:comment>
+Le sarcome de Kaposi est lié à l’infection par l’herpèsvirus humain 8 (HHV-8). S’il existe sous des formes indépendantes du virus du SIDA, il se développe particulièrement chez les individus co-infectés par le VIH et l’HHV-8. L’épidémie de SIDA a donc provoqué une explosion du nombre de cas de sarcome de Kaposi, notamment dans les régions d’Afrique où l’HHV-8 existe de façon endémique
+</rdfs:comment>
+	<ex:hasSymptom>
+L’épidémiologie et les modes de transmission du HHV-8 sont encore mal connus. Alors que le virus est transmis durant les contacts sexuels dans la population homosexuelle masculine, les modes de transmission dans les zones de forte endémie en Afrique semblent principalement la transmission mère-enfant et la transmission d’un enfant à l’autre, principalement par la salive. Celle-ci semble être un des réservoirs du virus. La transmission hétérosexuelle semble plus rare en zone d’endémie.
+Par ailleurs, l’existence de très nombreux porteurs asymptomatiques (plus de 99% des personnes infectées) pose le problème du dépistage de ce virus dans les dons de sang et surtout lors des dons d’organes.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>resistance aux antibiotiques</rdfs:label>
+	<rdfs:comment>
+Les antibiotiques sont des médicaments qui servent à soigner les infections dues à des bactéries. Les bactéries peuvent devenir insensibles à ces drogues : on parle alors de résistance aux antibiotiques et de bactéries résistantes. En Europe, le Centre européen de contrôle et de prévention des maladies (ECDC) évalue à 33 000 le nombre de décès résultants de bactéries résistantes aux antibiotiques. En France, en dépit d'un Plan national pour préserver l’efficacité des antibiotiques, la consommation d’antibiotiques reste anormalement élevée comparée à d’autres pays européens
+</rdfs:comment>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>rage</rdfs:label>
+	<rdfs:comment>
+La rage est toujours responsable aujourd’hui de dizaines de milliers de décès humains chaque année. Le poids de la maladie est supporté essentiellement par l’Afrique et l’Asie où le chien est le principal vecteur de transmission à l’homme. En Europe, les chauves-souris peuvent être infectées par certains lyssavirus, différents de celui du chien et toute exposition à risque avec ces animaux doit conduire à une consultation antirabique. En effet, la rage peut être prévenue efficacement par la vaccination mais est toujours mortelle une fois les premiers signes de la maladie déclarés.
+</rdfs:comment>
+	<ex:hasSymptom>
+Le virus rabique est neurotrope : il infecte le système nerveux et affecte son fonctionnement. Il ne provoque pas de lésions physiquement visibles dans le cerveau mais perturbe les neurones, notamment ceux qui régulent des fonctionnements autonomes comme l’activité cardiaque ou la respiration. Après quelques jours à quelques mois d’incubation le plus souvent, l’individu atteint développe un tableau d’encéphalite. La phase symptomatique débute souvent par une dysphagie (difficulté à avaler) et des troubles neuropsychiatriques variés, notamment l’anxiété et l’agitation. L’hydrophobie (spasme involontaire des muscles du cou et du diaphragme à la vue de l'eau) est parfois observée. Une fois les signes déclarés, l’évolution se fait vers le coma et la mort en quelques heures à quelques jours. Hormis quelques cas décrits, l’issue est toujours fatale lorsque la maladie est déclarée.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Poliomyélite</rdfs:label>
+	<rdfs:comment>
+La poliomyélite est une maladie très contagieuse provoquée par un virus (le poliovirus) qui envahit le système nerveux et qui peut entraîner en quelques heures des paralysies irréversibles. Depuis les années 60 cette maladie peut être prévenue grâce à des vaccins efficaces. Un programme  mondial visant à éradiquer la maladie par la vaccination a été lancé sous le contrôle de l’OMS.
+</rdfs:comment>
+	<ex:hasSymptom>
+La maladie se manifeste d'abord par des symptômes de type grippal (fièvre, fatigue, céphalées) pouvant s’accompagner de vomissements, raideur de la nuque et douleurs dans les membres. Une paralysie irréversible (des jambes en général) survient chez une personne infectée sur 200 environ. Sans mesure paliative, entre 5 et 10 % des patients paralysés meurent par asphyxie du fait de la parlysie des muscles assurant la ventilation. Chez les patients qui survivent, on peut observer des paralysies résiduelles occasionnant des handicaps avec des atteintes de degrés très variables. Celles-ci vont de paralysies mineures laissant une indépendance complète à des paralysies extrêmement handicapantes qui peuvent nécessiter une assistance respiratoire à vie.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>peste</rdfs:label>
+	<rdfs:comment>
+La peste est une maladie qui sévit toujours de nos jours en Afrique, Asie et Amérique et fait partie des maladies actuellement ré-émergentes dans le monde. Elle est soumise à une réglementation internationale. Le nombre de cas déclarés par l’OMS est en progression dans certaines régions. Au cours du XXe siècle, l’utilisation de traitements antibiotiques et le renforcement des mesures de santé publique ont réduit très fortement la morbidité et la mortalité dues à cette maladie, mais n’ont pas permis de la faire disparaître. La peste est une maladie des rongeurs, principalement véhiculée par le rat, et transmise à l’homme par piqûres de puces de rongeurs infectés. C’est le pasteurien Alexandre Yersin qui découvrit en 1894 le bacille responsable de la maladie, Yersinia pestis, bactérie d’une extrême virulence.
+</rdfs:comment>
+	<ex:hasSymptom>
+Voici les symptômes associés à chaque forme :
+       1. Pestebubonique :
+Fièvre soudaine et élevée
+Frissons
+Maux de tête intenses
+Fatigue
+Douleurs musculaires et articulaires
+Ganglions lymphatiques enflés et douloureux (bubons) dans les aisselles, l'aine ou le cou
+Peste septicémique :
+Fièvre élevée
+Frissons
+Faiblesse générale
+Abdomen douloureux
+Nausées et vomissements
+Peau pâle ou noircie
+Hémorragies cutanées ou internes
+Peste pulmonaire :
+Fièvre élevée
+Frissons
+Maux de tête sévères
+Essoufflement et difficulté respiratoire
+Toux productive (parfois avec du sang)
+Douleur thoracique
+Nausées, vomissements et diarrhée
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Paludisme">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Paludisme</rdfs:label>
+	<rdfs:comment>
+Le paludisme est une maladie provoquée par des parasites du genre Plasmodium. Selon l’Organisation mondiale de la santé (OMS), cette maladie a touché environ 241 millions de personnes dans le monde en 2020, et causé 627 000 décès. La situation est d’autant plus préoccupante que depuis plusieurs années les parasites développent des résistances aux molécules antipaludiques et les moustiques craignent de moins en moins les insecticides. Un vaccin existe désormais et est recommandé par l'OMS.
+</rdfs:comment>
+	<ex:hasSymptom>
+Les manifestations cliniques du paludisme sont très diverses. Le paludisme débute par une fièvre 8 à 30 jours après l’infection, qui peut s’accompagner - ou non - de maux de tête, de douleurs musculaires, d’un affaiblissement, de vomissements, de diarrhées, de toux. Des cycles typiques alternant fièvre, tremblements avec sueurs froides et transpiration intense, peuvent alors survenir : c’est " l’accès palustre". La périodicité de ces cycles dépend de l’espèce de parasite en cause, et coïncide avec la multiplication des parasites et l’éclatement des globules rouges, qui conduit également à l’anémie. Le paludisme engendré par P. falciparum peut être fatal s’il n’est pas traité. Dans certains cas, les globules rouges infectés peuvent obstruer les vaisseaux sanguins irriguant le cerveau : c’est le neuropaludisme, souvent mortel.
+Dans les régions où le paludisme est hautement endémique, une partie de la population est porteuse asymptomatique. Suite à de nombreuses années d’infection chronique par le parasite, certains individus tolèrent sa présence et développent une immunité naturelle (« immunité acquise »).
+</ex:hasSymptom>
+  </rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Mucoviscidose</rdfs:label>
+	<rdfs:comment>La mucoviscidose est la plus fréquente des maladies génétiques héréditaires graves dans la population caucasienne. C’est une maladie héréditaire à transmission autosomique récessive du gène CFTR. Elle entraîne une atteinte respiratoire létale qui concerne environ une naissance sur 2 500 en Europe et en Amérique du Nord. Bien que l’espérance de vie des individus touchés ait considérablement augmentée depuis les années 1980, aucun traitement ne permettait de venir à bout de la maladie jusqu’aux années 2015-2018. Depuis ces dates, de « nouvelles thérapies » ciblées sur les dysfonctions liées à la plupart des mutations de CFTR (traitements modulateurs ou correcteurs) ont considérablement amélioré les symptômes de la maladie
+</rdfs:comment>
+  </rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>COV</rdfs:label>
+	<rdfs:comment>
+En 2012, un nouveau virus respiratoire fait son apparition en Arabie Saoudite. Baptisé MERS-CoV pour Coronavirus du Syndrome Respiratoire du Moyen-Orient, il touche le tractus respiratoire et est responsable de fièvre et de toux, pouvant entrainer la mort dans environ 30% des cas. Le virus est alors détecté dans plusieurs pays du Moyen-Orient. Depuis, 1219 cas ont été diagnostiqués, provoquant 449 morts. Quelques cas ont été détectés en Europe, dont 2 cas en France en 2013. Le 20 mai 2015, un cas provenant du Moyen-Orient est identifié en Corée du Sud, contaminant à ce jour (16 juin 2015) indirectement 154 personnes, dont 19 mortellement. A l’heure actuelle, aucun traitement spécifique ou vaccin n’est disponible contre ce virus. L’enjeu actuel est de contenir l’épidémie, puis de poursuivre les efforts de recherche pour mettre au point un vaccin et un traitement.
+</rdfs:comment>
+	<ex:hasSymptom>
+Le virus se multiplient préférentiellement dans la partie basse du tractus respiratoire, provoquant fièvre, toux, difficultés à respirer, et parfois troubles gastro-intestinaux. Ces symptômes peu spécifiques ralentissent parfois le diagnostic, notamment dans un pays confronté pour la première fois à ce type de virus.La période d'incubation est de 5 à 15 jours. Dans les pays du Moyen-Orient où les populations sont plus fréquemment en contact avec les dromadaires, certaines personnes porteuses du virus ne présentent pas de symptômes.
+Ce virus peut être mortel quand il frappe les personnes déjà affaiblies par d’autres pathologies : diabète, insuffisance rénale, infection pulmonaire chronique, immunodépression. Le taux de létalité estimé est de 30% environ.
+</ex:hasSymptom>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Meningites a meningocoques</rdfs:label>
+	<rdfs:comment>La méningite est une infection des enveloppes entourant le cerveau, les méninges, causée par plusieurs types de virus, de bactéries, et de champignons. Les méningocoques (autre nom de la bactérie Neisseria meningitidis) constituent les causes majeures de méningites aiguës. Les infections à méningocoques ont un taux de mortalité élevé, malgré le traitement, à 10%, et un fort potentiel épidémique
+</rdfs:comment>
+	<ex:hasSymptom>
+La méningite à méningocoques survient généralement dans la première enfance (maximum d’incidence chez les moins d'un an) et chez l’adolescent et l'adulte jeune (entre 16 et 24 ans) et associe un syndrome infectieux (fièvre, maux de tête violents, vomissements) et un syndrome méningé (raideur de la nuque, léthargie, troubles de la conscience, voire coma). Chez le nouveau-né et le nourrisson, ces symptômes sont moins marqués : l’accès brutal de fièvre est parfois accompagné de convulsions ou vomissements. L’apparition de taches hémorragiques sous la peau (purpura), s’étendant progressivement (purpura extensif), est un critère de gravité de l’infection et une menace de choc septique, imposant le traitement antibiotique et l’hospitalisation d’urgence.
+
+La ponction lombaire (prélèvement de liquide céphalo-rachidien), complétée par une analyse des bactéries présentes dans le sang, permettent d’affirmer le diagnostic. Les complications les plus fréquentes de la méningite cérébro-spinale sont des atteintes neurologiques, en particulier la surdité. L’incubation dure généralement 3 à 4 jours mais peut être prolongée jusqu’à une dizaine de jours.
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Diabetes">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>Maladies mitochondriales</rdfs:label>
+	<rdfs:comment>
+Les maladies mitochondriales sont un ensemble de maladies génétiques, souvent héréditaires. On estime qu’il y a environ 200 nouveaux cas par an en France. Ces maladies peuvent impacter fortement le pronostic vital du patient, et il n’existe pas actuellement de traitement qui permette d’en guérir. Les symptômes sont très variés, ce qui rend l’identification de ces maladies difficile.
+</rdfs:comment>
+	<ex:hasSymptom>
+Le diagnostic clinique des maladies mitochondriales est compliqué et les personnes atteintes vont souvent développer des symptômes extrêmement variés impliquant différents organes ou tissus. Cependant, les manifestations les plus typiques des maladies mitochondriales correspondent à un dysfonctionnement des mitochondries dans les tissus à forte demande énergétique, à savoir le cœur, le cerveau et les muscles.
+Selon le nombre de mitochondries et d'organes atteints, ces pathologies peuvent se déclarer de façon très variable. Il peut s'agir de formes limitées à l'œil, comme la neuropathie optique héréditaire de Leber, ou de défaillances multisystémiques avec atteinte neurologique au premier plan, comme dans le syndrome d'Alpers.  On retrouve cependant souvent une atteinte neurologique ou musculaire.
+La variété des symptômes fait que les patients peuvent être initialement pris en charge par des médecins de nombreuses spécialités : neurologues, réanimateurs, pédiatres, généticiens, endocrinologues, diabétologues, néphrologues, cardiologues, hépato-gastro entérologues, ophtalmologistes, ORL 
+</ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+	<ex:hasSymptom></ex:hasSymptom>
+  </rdf:Description>
+
+<!--FIN KEVIN-->
+
+
+<!--DEBUT DONALD-->
+
+<rdf:Description rdf:about="http://www.example.com/Alzheimer">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Alzheimer</rdfs:label>
+    <rdfs:comment>
+Touchant près de 900 000 personnes en France, la maladie d’Alzheimer est une maladie neurodégénérative d’évolution progressive. Elle affecte principalement la mémoire, mais également d’autres fonctions cognitives, liées à la connaissance et mettant en jeu la mémoire, le langage, le raisonnement, l’apprentissage, etc. Cette maladie évolue généralement vers une perte d’autonomie de la personne qui en est atteinte. C’est une des causes principales d’handicap et de dépendance chez les personnes âgées. Néanmoins, 3,1% des personnes souffrant de la maladie d’Alzheimer ont moins de 65 ans. Actuellement, il n’existe aucun traitement curatif.
+</rdfs:comment>
+    <ex:hasSymptom>
+Les symptômes de la maladie d'Alzheimer peuvent varier d'une personne à l'autre, mais voici quelques symptômes courants :
+1. Perte de mémoire : Cela peut inclure l'oubli d'informations récemment apprises, de dates importantes ou d'événements récents.
+2. Difficultés cognitives : Les personnes atteintes de la maladie d'Alzheimer peuvent avoir des difficultés à se concentrer, à résoudre des problèmes ou à prendre des décisions.
+3. Changements de comportement : Des changements d'humeur, d'émotions ou de personnalité peuvent se produire, tels que l'irritabilité, la dépression ou l'anxiété.
+4. Difficultés dans les activités quotidiennes : Les tâches habituelles, telles que se souvenir des itinéraires, gérer les finances ou accomplir des tâches ménagères, peuvent devenir plus difficiles.
+5. Problèmes de langage : Des difficultés à trouver les mots appropriés, à suivre une conversation ou à s'exprimer clairement peuvent se manifester.
+6. Désorientation spatiale et temporelle : Les personnes atteintes d'Alzheimer peuvent se perdre dans des endroits familiers ou avoir du mal à se rappeler la date ou la saison en cours.
+7. Difficultés de coordination et de motricité : Des problèmes de coordination des mouvements, tels que la difficulté à marcher ou à effectuer des tâches motrices fines, peuvent survenir.
+Il est important de noter que ces symptômes peuvent être causés par d'autres conditions médicales, il est donc essentiel de consulter un professionnel de la santé pour un diagnostic précis.
+</ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Amibiase">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Amibiase</rdfs:label>
+    <rdfs:comment>
+L’amibiase occupe le troisième rang des maladies parasitaires les plus meurtrières au monde. Environ 10% de la population mondiale serait infectée par des amibes parasites du genre Entamoeba dont la plus pathogène est Entamoeba histolytica, l’agent de l’amibiase. L’infection est souvent asymptomatique, mais peut cependant entrainer de nombreuses complications.
+</rdfs:comment>
+    <ex:hasSymptom>
+Les amibes s’implantent dans la muqueuse de l’intestin. En la traversant, ils provoquent l’amibiase dont les symptômes peuvent aller de la diarrhée légère à la dysenterie avec sang et du mucus dans les selles. La destruction de la paroi intestinale peut par la suite entraîner la formation d’ulcères.
+Lorsque le parasite parvient à gagner la circulation sanguine, il peut infecter le foie, et donner naissance à des abcès qui, non traités, conduisent à une issue fatale. La maladie peut en outre évoluer vers d’autres complications locales, comme des abcès au niveau des poumons et, beaucoup plus rarement, au cerveau.
+  </ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Aspergillose">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Aspergillose</rdfs:label>
+    <rdfs:comment>
+L’Aspergillose est un terme qui regroupe les infections causées par des champignons appartenant au genre Aspergillus, dont les spores sont véhiculées par l’air et sont inhalées par tous les individus. Totalement inoffensif pour la majorité de la population, ces champignons peuvent cependant provoquer différentes formes de mycoses. L’espèce Aspergillus fumigatus est responsable de plus de 80% des aspergilloses humaines.
+</rdfs:comment>
+<ex:hasSymptom>
+L'aspergillose est une infection causée par le champignon Aspergillus. Les symptômes de l'aspergillose peuvent varier en fonction de la partie du corps affectée. Voici quelques symptômes courants associés à différentes formes d'aspergillose :
+1. Aspergillose pulmonaire : Les symptômes peuvent inclure une toux persistante, parfois avec du sang, une respiration sifflante, une oppression thoracique, de la fièvre et une fatigue.
+2. Aspergillose sinusale : Les symptômes peuvent inclure une congestion nasale persistante, des douleurs faciales, des maux de tête, une perte de l'odorat et des saignements de nez.
+3. Aspergillose cutanée : Les symptômes peuvent inclure des lésions cutanées, des plaies qui ne guérissent pas, des démangeaisons, une rougeur et une inflammation de la peau.
+4. Aspergillose invasive : Cette forme d'aspergillose peut affecter plusieurs organes et systèmes du corps. Les symptômes peuvent inclure de la fièvre, des frissons, une fatigue sévère, des douleurs musculaires et articulaires, des maux de tête, des problèmes respiratoires et une confusion mentale.
+Il est important de consulter un professionnel de la santé si vous présentez des symptômes qui pourraient être liés à l'aspergillose. Un diagnostic précis et un traitement approprié sont essentiels pour gérer cette infection fongique.
+</ex:hasSymptom>
+  </rdf:Description>
+
+ 
+
+ <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Diphtérie</rdfs:label>
+    <rdfs:comment>
+La Diphtérie est une maladie causée par plusieurs espèces de corynebactéries du complexe diphtheriae. La diphtérie typique est une infection respiratoire qui induit des atteintes du système nerveux central,  de la gorge ou d’autres organes, entraînant la mort par asphyxie. Plus fréquentes, les infections cutanées sont souvent moins graves. Il existe un vaccin efficace, obligatoire pour les enfants et les professionnels de santé, pour lequel il est recommandé de suivre le calendrier vaccinal toute sa vie.
+    </rdfs:comment>
+<ex:hasSymptom>
+La période d’incubation de la diphtérie est habituellement de 2 à 5 jours. Le symptôme le plus caractéristique de cette maladie est la présence de « fausses membranes » blanchâtres au niveau des amygdales ou de la plaie. L’angine diphtérique est la forme habituelle de la maladie. Elle est caractérisée par une pharyngite, de la fièvre, une tuméfaction du cou et une céphalée. Les très rares cas d’infection à C. pseudotuberculosis sont des atteintes ganglionnaires particulières (adénite nécrosante).
+</ex:hasSymptom>
+ </rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Dengue</rdfs:label>
+    <rdfs:comment>
+La dengue, aussi appelée « grippe tropicale », est une maladie virale transmise à l’homme par des moustiques du genre Aedes. L’incidence de la dengue progresse actuellement de manière très importante, et l’inscrit aujourd’hui aux rangs des maladies dites «ré-émergentes». L’OMS estime à 50 millions le nombre de cas annuels, dont 500 000 cas de dengue hémorragique qui sont mortels dans plus de 2,5% des cas. Deux milliards et demi de personnes vivent dans des zones à risque. Initialement présente dans les zones tropicales et subtropicales du monde, la dengue a désormais touché l’Europe où les 2 premiers cas autochtones ont été recensés en 2010. En 2019, le moustique vecteur est implanté dans 51 départements français. Le risque de propagation sera réel si des personnes infectées arrivent en France métropolitaine.  
+    </rdfs:comment>
+<ex:hasSymptom>
+La dengue classique
+La dengue « classique » se manifeste brutalement après 2 à 7 jours d’incubation par l’apparition d’une forte fièvre souvent accompagnée de maux de tête, de nausées, de vomissements, de douleurs articulaires et musculaires et d’une éruption cutanée ressemblant à celle de la rougeole. Au bout de 3 à 4 jours, une brève rémission est observée, puis les symptômes s’intensifient - des hémorragies conjonctivales, des saignements de nez ou des ecchymoses pouvant survenir - avant de régresser rapidement au bout d’une semaine. La guérison s’accompagne d’une convalescence d’une quinzaine de jours. La dengue classique, bien que fort invalidante, n’est pas considérée comme une maladie sévère comme l’est la dengue hémorragique.
+</ex:hasSymptom>
+</rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Cryptococcose</rdfs:label>
+    <rdfs:comment>
+La cryptococcose est une infection fongique grave. Elle survient chez les patients immunodéprimés. La forme clinique la plus fréquente de cette infection est une méningo-encéphalite, fatale en l’absence de traitement.
+    </rdfs:comment>
+<ex:hasSymptom>
+La forme clinique la plus fréquente de la cryptococcose est une méningo-encéphalite disséminée (dans plus de 60% des cas, et dans plus de 80% des cas chez les patients infectés par le VIH). Les symptômes sont variables : céphalées et fièvre modérée surviennent chez plus de 70% des malades tandis que vertiges, irritabilité, troubles de l’idéation, crises convulsives, obnubilation voire coma, paralysie d’un nerf crânien, déficit moteur peuvent apparaître dans 20 à 50% des cas. La brièveté de l’évolution des symptômes et les signes d’hypertension intracrânienne sont de mauvais pronostic. En l’absence de traitement, l’évolution vers l’aggravation et la mort est inéluctable. En cas de traitement, la mortalité précoce reste encore de l’ordre de 27% chez les patients non VIH et 14% chez les patients VIH.
+L’infection peut également être localisée dans les poumons, la pneumopathie se manifestant par des signes non spécifiques (toux et fièvre modérée), ou à tout autre organe. Des lésions cutanées, conséquence d’une dissémination de la levure dans le sang, peuvent apparaître sous forme de papules indolores, pouvant s’ulcérer. Certains patients sont asymptomatiques. Le diagnostic est établi par la mise en évidence à l’examen direct ou en histologie de levures entourées d’un halo clair dans les tissus ou liquides prélevés, par l’identification de Cryptococcus neoformans dans ces mêmes échantillons et/ou par la détection de l’antigène spécifique dans le sérum et/ou le liquide céphalorachidien. Des tests rapides ont été mis au point permettant de diagnostiquer l’infection au lit du malade.
+</ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Coqueluche</rdfs:label>
+    <rdfs:comment>
+Considérée longtemps par erreur comme une maladie de la petite enfance, la coqueluche peut être sévère à tout âge. Elle est particulièrement dramatique, voire mortelle, pour les jeunes nourrissons non ou partiellement vaccinés et les personnes à risque telles que les femmes enceintes et les personnes âgées.
+    </rdfs:comment>
+<ex:hasSymptom>
+La coqueluche typique se caractérise par trois phases :
+(1) une phase d’incubation initialement sans aucun symptôme, suivi d’une rhinorrhée (écoulement nasal) de deux semaines environ ;
+(2) une phase paroxystique qui se caractérise par une toux persistante de plus de 7 jours, sans fièvre dans la majorité des cas, avec quintes associées à une reprise inspiratoire difficile, et parfois des vomissements survenant après les quintes. Chez les nourrissons, peuvent survenir des apnées parfois accompagnées de bradycardies, ou encore des accès de cyanose lors des quintes. Chez les adolescents et adultes, une recrudescence nocturne est observée dans la majorité des cas ;
+(3) Enfin la phase de convalescence qui peut durer plusieurs semaines. Chez les jeunes enfants, les complications notables sont des pneumonies ou des affections neurologiques (crises convulsives, encéphalites). Chez le nourrisson, la coqueluche peut être très grave voire mortelle car accompagnée d’une défaillance respiratoire ou multiviscérale.
+Les caractéristiques cliniques pouvant varier, en particulier chez les adolescents ou adultes en fonction de leur état immunitaire, il est très important de confirmer l’infection par un diagnostic biologique ; cela permet de traiter le patient par antibiotique dès que possible, et ainsi d’arrêter rapidement la transmission car la maladie est très contagieuse et de protéger les personnes en contact avec la personne infectée.
+</ex:hasSymptom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Choléra">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Choléra</rdfs:label>
+    <rdfs:comment>
+Le choléra est une maladie diarrhéique épidémique, strictement humaine, due à des bactéries appartenant aux sérogroupes O1 et O139 de l’espèce Vibrio cholerae. Ce bacille fût initialement observé par Pacini en 1854 puis isolé en 1883 par Robert Koch en Inde. La bactérie V. cholerae sérogroupe O1, biotype El Tor, est répandue sur toute la planète, qui subit actuellement la septième pandémie de choléra. L’Organisation mondiale de la santé estime à près de 3 millions le nombre de cas et à plus de 95 000 le nombre de décès dus à cette maladie chaque année dans le monde. Toutes les régions du monde déclarent des cas de choléra, l’Afrique est le continent le plus touché et concentre plus de 50% des cas. Le taux global de létalité a été de 1,8%, en 2016, mais a dépassé les 6% parmi les groupes vulnérables résidant dans des zones à haut risque.
+    </rdfs:comment>
+<ex:hasSymptom>
+Moins de 25% des personnes infectées développent des symptômes et de 10 à 20% d'entre elles vont déclarer une maladie sévère. L’incubation - de quelques heures à quelques jours - est suivie de violentes diarrhées et de vomissements, sans fièvre. En l’absence de traitement, dans ses manifestations les plus sévères, le choléra est l’une des maladies infectieuses les plus rapidement mortelles : la mort survient en 1 à 3 jours, par collapsus cardio-vasculaire dans 25 à 50% des cas. La mortalité est plus élevée chez les enfants, les personnes âgées et chez les individus fragilisés.
+Le traitement consiste essentiellement à compenser les pertes digestives d’eau et d’électrolytes. La réhydratation est assurée par voie orale ou par voie intraveineuse, selon le degré de déshydratation. L’amélioration est perceptible au bout de quelques heures et la guérison, sans séquelle, est obtenue en quelques jours.
+L’antibiothérapie est utile dans les cas graves, mais l’émergence de souches de vibrions cholériques multi-résistantes aux antibiotiques nécessite de tester la sensibilité aux antibiotiques sur un échantillon représentatif de souches isolées.  
+L’amélioration de l’accès à l’eau potable et les mesures d’hygiène générale sont essentielles dans la lutte contre le choléra, impliquant une véritable mobilisation sanitaire en cas d’épidémie, et un développement de l’éducation sanitaire dans les pays où le choléra sévit régulièrement. Mais il est prévisible que cette élévation du niveau d’hygiène ne sera pas réalisée avant plusieurs décennies dans les pays atteints par le choléra.
+</ex:hasSymptom>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Chikungunya">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Chikungunya</rdfs:label>
+    <rdfs:comment>
+Le virus du chikungunya, transmis à l’homme par la piqûre du moustique tigre (Aedes albopictus) ou du moustique Aedes aegypti, provoque chez les patients des douleurs articulaires aiguës qui peuvent être persistantes. Les traitements existants sont uniquement symptomatiques. La maladie est endémique principalement en Asie du Sud et en Afrique. En 2005, une importante épidémie de chikungunya a touché les îles de l’Océan Indien et notamment, l’Île de La Réunion, avec plusieurs centaines de milliers de cas déclarés. En 2007, la maladie a fait son apparition en Europe, où un des moustiques vecteurs, Aedes albopictus, s’est établi. Les premiers cas autochtones dans le Sud de la France ont été recensés en 2010. Fin 2013 et en 2014, le chikungunya s’est propagé aux Antilles et a atteint le continent américain.  Actuellement en France, 64 départements rassemblent toutes les conditions propices à l’émergence du chikungunya : la présence du moustique vecteur dans la région, la température et l’humidité favorables à l’éclosion des œufs et de nombreux voyageurs revenant de pays où le virus du chikungunya circule.
+    </rdfs:comment>
+<ex:hasSymptom>
+Une infection fortement invalidante
+En langue Makondée, chikungunya signifie « qui marche courbé en avant », et évoque la posture adoptée par les malades en raison d'intenses douleurs articulaires.
+L’infection à virus chikungunya entraine en effet, après un délai d’incubation de 2 à 10 jours, des atteintes articulaires, souvent très invalidantes, concernant principalement les petites ceintures articulaires (poignets, doigts, chevilles, pieds) mais aussi les genoux et plus rarement, les hanches ou les épaules. A cette atteinte articulaire s’associent fréquemment des maux de tête, accompagnés de fièvre, des douleurs musculaires importantes, une éruption cutanée au niveau du tronc et des membres, une inflammation d’un ou plusieurs ganglion(s) lymphatiques cervicaux ou encore une conjonctivite.
+Des saignements des gencives ou du nez ont en outre été fréquemment décrits, principalement en Asie.
+Alors que les formes sévères de chikungunya n’étaient qu’exceptionnellement décrites dans les zones historiques d’endémie (Afrique, Asie), l’épidémie de 2005 survenue sur l’Ile de La Réunion a permis de montrer l’existence de formes neurologiques graves, notamment des méningo-encéphalites et des atteintes des nerfs périphériques. Ces dernières sont principalement rencontrées chez des personnes âgées, ou au système immunitaire affaibli, et chez des nouveau-nés, infectés in utero lors de l'infection de la mère.
+</ex:hasSymptom>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Candidoses">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Candidoses</rdfs:label>
+    <rdfs:comment>
+Les champignons (levures) du genre Candida peuvent provoquer des infections superficielles touchant les muqueuses et la peau et des infections viscérales : elles peuvent se limiter à un organe ou disséminer à travers l’organisme. Parmi les 200 espèces de Candida connues, une vingtaine est responsable d’infections humaines. Les levures Candida sont souvent responsables d’infections graves, survenant dans un contexte nosocomial.
+    </rdfs:comment>
+<ex:hasSymptom>
+La candidose, également connue sous le nom de muguet ou infection à levures, est causée par une prolifération excessive du champignon Candida dans le corps. Les symptômes de la candidose peuvent varier en fonction de la zone infectée, mais voici quelques symptômes courants associés à différentes formes de candidose :
+Candidose buccale (muguet) : plaques blanchâtres ou crémeuses dans la bouche, sur la langue, les joues, les gencives ou la gorge. Ces plaques peuvent être douloureuses et peuvent saigner lorsqu'elles sont grattées.
+Candidose cutanée : rougeurs, démangeaisons, éruptions cutanées, desquamation de la peau, sensation de brûlure ou de douleur dans les zones infectées. Les zones couramment touchées comprennent les plis cutanés, les aisselles, l'aine, les fesses et les seins chez les femmes allaitantes.
+Candidose génitale : démangeaisons, brûlures, rougeurs, gonflement, pertes vaginales épaisses et blanches chez les femmes, douleur ou sensation de brûlure lors de la miction ou des rapports sexuels.
+Candidose systémique : fièvre, frissons, fatigue, douleurs musculaires et articulaires, maux de tête, troubles digestifs, difficultés respiratoires, infections récurrentes.
+Il est important de consulter un professionnel de la santé pour un diagnostic précis et un traitement approprié si vous présentez des symptômes de candidose. Le traitement peut inclure des antifongiques topiques ou oraux, ainsi que des mesures pour renforcer le système immunitaire.
+</ex:hasSymptom>
+</rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Chlamydiose</rdfs:label>
+    <rdfs:comment>
+La chlamydiose désigne une infection sexuellement transmissible (IST) causée par la bactérie Chlamydia trachomatis. Il s’agit de l’IST bactérienne la plus répandue. Les hommes et les femmes peuvent être infectés, et l’infection est particulièrement fréquente chez les jeunes. L’infection est souvent asymptomatique, et donc non diagnostiquée et non traitée, ce qui contribue à sa transmission. Il est possible de contracter des chlamydioses plusieurs fois, car l’immunité acquise contre cette bactérie est faible. Tous les types de rapports sexuels peuvent être contaminants, y compris les rapports buccogénitaux et anogénitaux.
+    </rdfs:comment>
+<ex:hasSymptom>
+L’infection génitale est le plus souvent asymptomatique. Lorsqu’ils se manifestent, quelques semaines après la contamination, les symptômes de l’infection chez les femmes sont des douleurs en urinant ou pendant les rapports sexuels, des écoulements vaginaux jaunâtres ou sanguinolents et des maux de ventre. Chez les hommes, l’infection peut se manifester par des picotements ou brûlures en urinant, ou par des écoulements blanchâtres au niveau du pénis ou du rectum. Même en cas d’absence de symptôme, une personne infectée peut transmettre l’infection au cours de rapports sexuels. Enfin, par contact avec des sécrétions infectées, les bactéries peuvent infecter et proliférer dans la conjonctive de l’œil, donnant lieu à une conjonctivite.
+</ex:hasSymptom>
+</rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Cancers et ulcères gastriques</rdfs:label>
+    <rdfs:comment>
+Il est aujourd’hui admis que la bactérie Helicobacter pylori est l’agent causal de pathologies de l’estomac chez l'Homme : elle est responsable de gastrites chroniques, d’ulcères gastriques et duodénaux et elle joue un rôle important dans la genèse des cancers gastriques (adénocarcinomes et lymphomes). Ceci a conduit à réviser le traitement de la maladie ulcéreuse désormais considérée comme une maladie infectieuse, et pose d’une façon plus générale la question de l’éradication de cette bactérie (qui infecte 50% de la population mondiale) comme moyen de prévention des cancers gastriques.
+    </rdfs:comment>
+<ex:hasSymptom>
+</ex:hasSymptom>
+</rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Cancer du col de l’utérus et Papillomavirus</rdfs:label>
+    <rdfs:comment>
+Le cancer du col de l’utérus est le second cancer le plus fréquent chez la femme dans le monde. Il survient exclusivement après l’infection par des virus appartenant à la famille des papillomavirus. Près de 500 000 nouveaux cas et 250 000 à 300 000 victimes sont recensés chaque année. Un vaccin préventif qui protège contre certains papillomavirus est disponible et permet de prévenir les deux tiers des cancers du col de l’utérus.
+    </rdfs:comment>
+<ex:hasSymptom>
+Le cancer du col de l'utérus est souvent causé par une infection persistante par certains types de papillomavirus humains (HPV). Les symptômes du cancer du col de l'utérus peuvent varier, mais ils peuvent inclure :
+Saignements vaginaux anormaux, tels que des saignements entre les règles, des saignements après les rapports sexuels ou des saignements après la ménopause.
+Pertes vaginales anormales, telles que des pertes malodorantes, épaisses ou teintées de sang.
+Douleurs pelviennes ou douleurs pendant les rapports sexuels.
+Fatigue persistante ou perte de poids inexpliquée.
+Il est important de noter que ces symptômes peuvent également être causés par d'autres affections, et que la présence de ces symptômes ne signifie pas nécessairement que vous avez un cancer du col de l'utérus. Si vous présentez l'un de ces symptômes, il est recommandé de consulter un professionnel de la santé pour un examen et un dépistage appropriés.
+</ex:hasSymptom>
+</rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/Migraine">
+    <rdf:type rdf:resource="http://www.example.com/Disease"/>
+    <rdfs:label>Botulisme</rdfs:label>
+    <rdfs:comment>
+Le botulisme est une affection neurologique grave provoquée par une toxine très puissante produite par la bactérie Clostridium botulinum. Celle-ci se développe notamment dans les aliments mal conservés, et la maladie résulte en général d’une intoxication alimentaire. Si le botulisme est rare, sa mortalité reste élevée quand le traitement n’est pas immédiat.
+    </rdfs:comment>
+<ex:hasSymptom>
+Le botulisme se déclare après une incubation de quelques heures à quelques jours, en fonction du mode de contamination. En général, les personnes ayant partagé les mêmes aliments manifestent des symptômes identiques, mais avec une sévérité variable. Ceux-ci débutent par une atteinte oculaire (défaut d’accommodation, vision floue), une sécheresse de la bouche accompagnée d’un défaut de déglutition voire d’élocution, puis d’une parésie à une paralysie des muscles. Dans les formes avancées, ils évoluent vers une paralysie descendante des membres et des muscles respiratoires. C’est cette insuffisance respiratoire qui entraîne le décès. On peut distinguer plusieurs formes de botulisme, le botulisme infantile et le botulisme par blessure.
+</ex:hasSymptom>
+</rdf:Description>
+
+
+
+<!--FIN DONALD-->
+
+<!--DEBUT BABACAR-->
+
+#<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>EBOLA</rdfs:label>
+	<rdfs:comment>Le virus Ebola est responsable de fortes fièvres et d'hémorragies souvent mortelles pour l'homme. Le taux de létalité se situe entre 30 et 90% selon les épidémies et l'espèce virale. Le réservoir naturel du virus serait la chauve-souris. Le virus Ebola a été découvert en 1976, lors des deux flambées épidémiques au Soudan et en République démocratique du Congo. Depuis, une vingtaine de flambées épidémiques sont apparues en Afrique Centrale. En décembre 2013, le virus a atteint l’Afrique de l’Ouest, région qui était jusqu’alors épargnée par la maladie. En 2014, il provoque la plus grande épidémie connue jusqu’à présent. Depuis, il a réémergé à plusieurs reprises en RDC, mais
+aussi en Guinée en 2021. L’enjeu des recherches actuelles est de poursuivre le développement des traitements et des outils diagnostiques pour le traitement et le dépistage de la maladie.</rdfs:comment>
+	<ex:hasSymptom>
+	La maladie à virus Ebola est une maladie virale aiguë sévère se caractérisant initialement par des symptômes non spécifiques, de type pseudo grippaux : apparition brutale d’une fièvre supérieure à 38°C, une faiblesse intense, des douleurs musculaires, des maux de tête et une irritation de la gorge. Ces symptômes sont suivis de vomissements, de diarrhées, d’éruptions cutanées, d’une atteinte rénale et hépatique et dans certains cas, d’hémorragies internes et externes. La durée d’incubation, c'est-à-dire le temps écoulé entre l’infection et l’apparition des symptômes, varie de 2 à 21 jours, mais est le plus souvent comprise entre 5 et 12 jours.
+Seuls les tests en laboratoire permettent de confirmer le diagnostic. L’analyse des échantillons est exécutée dans des conditions de confinement extrêmement rigoureuses.
+</ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>ESCHERICHIA COLI ENTÉROHÉMORRAGIQUES (ECEH)</rdfs:label>
+	<rdfs:comment>Escherichia coli (E. coli) est une bactérie qui réside dans le tube digestif de l’homme et des animaux à sang chaud. La majorité des souches de E. coli sont inoffensives, quelques-unes seulement sont pathogènes pour l’homme. C’est le cas des souches de E. coli dites entérohémorragiques (ECEH). Ces dernières provoquent des diarrhées sanglantes et produisent une puissante toxine à l’origine du syndrome hémolytique et urémique (SHU). Régulièrement, des souches de ECEH sont la cause d’intoxications alimentaires via la consommation de produits animaux (viande ou produits laitiers) mal cuits ou consommés crus. Les fruits et les légumes frais, ayant été en contact avec des ECEH peuvent être également à risque.</rdfs:comment>
+	<ex:hasSymptom>Les symptômes provoqués par ECEH (E. coli entérohémorragiques) apparaissent entre 3 et 8 jours après l’infection. Il s’agit de douleurs abdominales et de diarrhées, lesquelles peuvent évoluer vers des formes sanglantes (colites hémorragiques). Des vomissements et de la fièvre peuvent aussi survenir.
+Parallèlement, les toxines produites par ECEH (appelées Shiga-toxines en raison de leur ressemblance avec celles produites par Shigella dysenteriae ou Bacille de Shiga) détruisent la paroi des vaisseaux sanguins et causent des problèmes de coagulation ainsi que d’hypertension artérielle. Chez 10% des personnes infectées, la dissémination des Shiga-toxines provoque un syndrome hémolytique et urémique (SHU), mortel dans 3 à 5% des cas. Ce dernier est caractérisé par une atteinte de la fonction rénale et par une baisse de la concentration des cellules sanguines (globules rouges et plaquettes). Un quart des personnes souffrant de SHU développe aussi des complications neurologiques qui peuvent aboutir à un état de coma. Des séquelles rénales pouvant conduire à une insuffisance rénale chronique plusieurs années après l’épisode de SHU s’observent aussi fréquemment.
+</ex:hasSymptom>
+ </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>FIÈVRE DE LASSA</rdfs:label>
+	<rdfs:comment>La fièvre de Lassa est une fièvre hémorragique causée par un Arénavirus, le virus Lassa. Celui-ci est endémique dans plusieurs pays d’Afrique de l’Ouest, où il infecte de 100 à 300 000 personnes par an dont 5 à 6 000 succombent. Il n’existe à ce jour aucun vaccin contre ce virus qui représente non seulement un problème de santé publique, mais qui de plus fait partie des agents potentiellement utilisables pour le bioterrorisme.</rdfs:comment>
+	<ex:hasSymptom>Un tableau clinique variable
+Le tableau clinique de la fièvre de Lassa est variable, depuis l’infection asymptomatique, très fréquente (80% des cas) à une fièvre hémorragique foudroyante. La maladie débute 6 à 21 jours après l’infection par des signes cliniques peu spécifiques : fièvre, vomissements, nausées, douleurs abdominales, céphalées, myalgies, arthralgies, asthénie. Dans les cas sévères, les symptômes s’aggravent ensuite, avec l’apparition d’oedèmes, de signes hémorragiques, d’épanchements péricardiques et pleuraux, et plus rarement d’encéphalites.
+Le patient décède dans un contexte de choc hypotensif et hypovolémique et de défaillances rénale et hépatique.
+La fièvre de Lassa est d’une extrême gravité pour la femme enceinte, conduisant fréquemment au décès de la mère et systématiquement à celui du fœtus.
+</ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>FIÈVRE JAUNE</rdfs:label>
+	<rdfs:comment>La fièvre jaune est une maladie virale décrite pour la première fois au milieu du XVIe siècle au Yucatán (Mexique). Elle est due au virus de la fièvre jaune, un arbovirus (virus transmis par un insecte vecteur) isolé en 1927 simultanément au Ghana et au Sénégal, à l’Institut Pasteur de Dakar. La maladie est endémique en Afrique, en Amérique du Sud et en Amérique Centrale. Le taux de mortalité est élevé, entre 20 et 60% selon les épidémies . Il existe un vaccin efficace et sûr, qui permet une protection à long terme. La maladie refait son apparition dans certains pays africains et sud-américains où la couverture vaccinale est faible. Pour la première fois, des cas de fièvre jaune ont également été déclarés récemment en Chine.</rdfs:comment>
+	<ex:hasSymptom>Après une incubation de 3 à 6 jours, la maladie débute typiquement avec fièvre, frissons, douleurs musculaires et maux de tête. Elle évoque alors une grippe, une dengue ou un paludisme. Dans les formes graves, au bout de trois jours, une rémission passagère précède l’apparition d’un syndrome hémorragique avec vomissement de sang noirâtre (vomito negro), d’un ictère qui donne son nom à la maladie et de troubles rénaux (albuminurie). La mort survient alors dans 20 à 60% des cas, après une phase de délire, de convulsions, et un coma. Toutes les formes curables entraînent une immunité à vie.Il n’existe aucun traitement spécifique contre la fièvre jaune. Hormis la prévention par vaccination, les seules armes pour combattre la maladie une fois qu’elle a été contractée sont le repos, la réhydratation et l’administration de médicaments visant à limiter la fièvre, les vomissements et la douleur.
+</ex:hasSymptom>
+	
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Fievre">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>FIÈVRES TYPHOÏDE ET PARATYPHOÏDE</rdfs:label>
+	<rdfs:comment>Les fièvres typhoïde et paratyphoïde sont des maladies infectieuses potentiellement mortelles en l’absence de traitement. Ces fièvres surviennent le plus souvent dans des zones où l’hygiène est précaire et frappent principalement les pays en voie de développement. En France, de 100 à 150 cas sont répertoriés chaque année chez des voyageurs ou des personnes originaires de zones d’endémie (Afrique, Asie, Amérique latine).
+</rdfs:comment>
+	<ex:hasSymptom>Une à trois semaines après la contamination survient une fièvre continue accompagnée de maux de tête, d'anorexie, d'abattement, de douleurs abdominales avec diarrhée ou constipation.
+Dans les formes bénignes, l’état reste stationnaire pendant une quinzaine de jours puis la convalescence dure plusieurs semaines. Dans les formes plus graves où des complications peuvent survenir au niveau de l’intestin, du cœur ou du cerveau, la fièvre typhoïde peut être fatale en l’absence de traitement.
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/grippeAviaire">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>GRIPPE AVIAIRE</rdfs:label>
+	<rdfs:comment>La grippe aviaire est une maladie virale qui sévit chez les oiseaux, et dont le taux de mortalité est très élevé chez les oiseaux d’élevage (poulet, oies, etc.). Si la plupart des virus aviaires n’infectent pas l’homme, certains sous-types parviennent parfois à franchir la barrière des espèces : c’est le cas du virus H5N1, pathogène pour l’homme et présent en Asie. A l’heure actuelle, la transmission du virus ne se fait que de l’animal à l’homme, mais les autorités sanitaires redoutent une évolution du virus vers une forme transmissible d’homme à homme, porte ouverte à une pandémie.
+</rdfs:comment>
+	<ex:hasSymptom>Certaines personnes infectées peuvent ne développer aucun symptôme. Cependant, si des symptômes apparaissent, la maladie peut aller de légère à très grave, y compris la mort. Il faut généralement de 1 à 5 jours, et parfois plus, pour que les symptômes apparaissent après l'exposition.
+Les symptômes commencent souvent par :
+      toux
+      essoufflement
+      fièvre, supérieure à 38 °C (100,4 °F)
+      douleurs musculaires
+      maux de tête
+      Les autres symptômes précoces peuvent être les suivants :
+      diarrhée
+      nez qui coule
+      mal de gorge
+      fatigue
+      conjonctivite (yeux rouges)
+      saignement des gencives
+</ex:hasSymptom>
+  </rdf:Description>
+
+ <rdf:Description rdf:about="http://www.example.com/hepatite">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>HÉPATITES VIRALES</rdfs:label>
+	<rdfs:comment>Une hépatite est une inflammation du foie causée par des substances toxiques, ou par des virus (majorité des cas). A ce jour, 5 virus provoquant une infection ciblée et une inflammation du foie ont été identifiés. Ces virus, désignés par les lettres A, B, C, D, et E, diffèrent par leur mode de transmission (féco-orale pour les virus A et E ; parentérale pour les virus B et C) et leur agressivité.</rdfs:comment>
+	<ex:hasSymptom>L'hépatite aiguë commune, provoquée par le virus A (ou bénigne) est la forme la plus fréquente (90 % des cas). C'est la jaunisse ou ictère. La maladie commence souvent par une semaine de troubles divers : arthralgies, céphalées, anorexie, nausées, douleurs abdominales, urticaire. Puis l'ictère apparaît, d'intensité variable, souvent prurigineux. Les urines sont rares et foncées. L' asthénie est importante. L'évolution est favorable en 2 à 6 semaines bien que la fatigue puisse persister quelques mois. Dans certains cas, l' ictère est très léger ou absent : c'est l'hépatite anictérique dont le diagnostic n'est pas toujours facile.
+</ex:hasSymptom>
+	<ex:hasSymptom>Fever</ex:hasSymptom>
+	<ex:hasSymptom>Runny nose</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/HTLV-I">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>HTLV-I</rdfs:label>
+	<rdfs:comment>Isolé en 1980 par l’équipe de Robert Gallo aux Etats-Unis, le virus HTLV-1 est le premier rétrovirus humain oncogène à avoir été découvert. Dans 3-8% des cas, les personnes infectées développent un cancer de type leucémie/lymphome ou une neuromyélopathie. Au moins 5 à 10 millions de personnes sont infectées par ce virus à travers le monde. Les foyers majeurs d’infection endémique pour HTLV-1 sont localisés au Sud-ouest du Japon, dans les Caraïbes, en Amérique Latine, en Afrique tropicale et dans certaines régions du Moyen-Orient et d’Australo-Mélanésie.</rdfs:comment>
+	<ex:hasSymptom>L’ATLL
+
+L’ATLL (Adult T-cell leukemia/lymphoma), dans sa forme leucémique ou lymphomateuse, est un cancer très agressif, d’évolution rapide, résistante à la chimiothérapie, qui emporte généralement le malade en moins d’un an. Elle est observée chez des individus ayant entre 20 et 70 ans, et le plus fréquemment chez des personnes ayant la cinquantaine. Les symptômes sont variables, et souvent compliqués de lésions de la peau, d’une hypertrophie des ganglions lymphatiques, du foie ou de la rate. Les cellules leucémiques ou lymphomateuses infiltrent divers organes. En plus des formes aiguës de la maladie, existent certaines formes où les patients ont peu de cellules T anormales dans le sang et n’ont pas de signes sévères de la maladie pendant une longue période. Certaines personnes souffrent aussi de formes chroniques dans lesquelles le taux de cellules leucémiques est élevé, la maladie pouvant malgré cela rester stable pendant quelques temps.
+
+Actuellement, la seule thérapie existante est la greffe de moelle osseuse. Celle-ci peut permettre au patient de guérir, mais elle n’est pas possible pour tous les cas, et il peut être difficile de trouver un donneur compatible.
+
+Divers essais associant chimiothérapie et/ou antiviraux commencent à donner des résultats encourageants, dans les formes chroniques en particulier, mais les formes leucémique et lymphomateuse restent de très sombre pronostic.
+</ex:hasSymptom>
+	<ex:hasSymptom>Fever</ex:hasSymptom>
+	<ex:hasSymptom>Runny nose</ex:hasSymptom>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/Legionllose">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>LÉGIONELLOSE</rdfs:label>
+	<rdfs:comment>La légionellose est une maladie d’origine bactérienne, potentiellement mortelle. Elle entraine une infection pulmonaire aigüe. L’émergence récente de cette maladie s’explique par son affinité pour les systèmes modernes d’alimentation en eau comme les réseaux d'eau chaude sanitaire, les tours de refroidissement, les bains à jet, les bains à remous (jacuzzi),  etc.
+</rdfs:comment>
+	<ex:hasSymptom>Les symptômes initiaux sont de la fièvre, une perte d'appétit, des céphalées, un état de malaise, une léthargie. Certains patients peuvent aussi présenter des douleurs musculaires, de la diarrhée et un état confusionnel.
+</ex:hasSymptom>
+	<ex:hasSymptom>Fever</ex:hasSymptom>
+	<ex:hasSymptom>Runny nose</ex:hasSymptom>
+  </rdf:Description>
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>LEISHMANIOSE</rdfs:label>
+	<rdfs:comment>Les leishmanioses sont des maladies parasitaires provoquant des affections cutanées ou viscérales très invalidantes, voire mortelles si elles ne sont pas traitées. Elles sont dues à différents parasites du genre Leishmania, transmis par la piqûre d’insectes communément appelés phlébotomes. Chaque année, 700 000 à 1 million  de nouveaux cas de leishmanioses sont répertoriés dans le monde, et ces parasitoses sont aujourd’hui considérées comme des maladies négligées émergentes en Europe.
+</rdfs:comment>
+	<ex:hasSymptom>Les leishmanioses peuvent se présenter sous différentes formes cliniques que l’on classe principalement en deux catégories :
+
+La leishmaniose cutanée, le plus souvent bénigne, se caractérise par des lésions ulcérées ou ulcéro-croûteuses, parfois très nombreuses, localisées sur les parties découvertes du corps et qui guérissent en général spontanément en laissant des cicatrices. Selon l’espèce infectante la leishmaniose cutanée peut évoluer vers une forme cutanéo-muqueuse ou cutanée diffuse.
+La leishmaniose viscérale, la forme la plus grave, se manifeste par de la fièvre, de l’anémie, un amaigrissement, un gonflement du foie et de la rate et des ganglions lymphatiques. Elle est mortelle en l’absence de traitement.
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>LÈPRE</rdfs:label>
+	<rdfs:comment>La lèpre est une maladie chronique d’origine bactérienne. Elle fait partie des maladies tropicales négligées. Malgré l’existence d’un traitement efficace, des milliers de nouveaux cas sont recensés chaque année. La lèpre reste un problème de santé public majeur pour plusieurs pays d’Afrique, d’Asie et d’Amérique Latine.
+</rdfs:comment>
+	<ex:hasSymptom>Le bacille de la lèpre se multiplie très lentement : la période d’incubation de la maladie est de 5 ans en moyenne, mais les symptômes peuvent parfois n’apparaître qu’au bout de 20 ans. La maladie provoque des lésions cutanées et nerveuses. Sans traitement, ces lésions progressent et deviennent permanentes, touchant la peau, les nerfs, les membres et les yeux. On distingue deux types de lèpre : paucibacillaire (une à cinq lésions cutanées insensibles) et multibacillaire (plus de cinq lésions cutanées insensibles).
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>LEPTOSPIROSE</rdfs:label>
+	<rdfs:comment>La leptospirose est une maladie bactérienne présente dans le monde entier. Ses principaux réservoirs sont les rongeurs, en particulier les rats, qui excrètent la bactérie dans leur urine. Chez l’homme, la maladie est souvent bénigne, mais peut conduire à l’insuffisance rénale, voire à la mort dans 5 à 20% des cas.
+.</rdfs:comment>
+	<ex:hasSymptom>L’incubation dure en moyenne de 4 à 14 jours. De nombreuses formes cliniques, allant du syndrome grippal à l’atteinte multiviscérale avec syndrome hémorragique sont décrites. Dans la forme modérée, la maladie débute par une fièvre élevée avec frissons, maux de tête, douleurs musculaires et douleurs articulaires diffuses. Elle peut cependant évoluer vers une atteinte rénale, hépatique, méningée ou pulmonaire. Dans 20% des cas, elle se complique d’un syndrome hémorragique. Aucun signe n’est vraiment spécifique mais l’existence d’un ictère conjonctival et de myalgies est particulièrement évocatrice. Les formes graves (ictéro-hémorragique ou maladie de Weil) associent insuffisance rénale aiguë, atteinte neurologique (convulsions, coma) et des hémorragies plus ou moins sévères (pulmonaire, digestive). La convalescence est longue, mais généralement sans séquelles. Des complications oculaires (uvéite, kératite) tardives peuvent survenir.
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+  <rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>LISTÉRIOSE</rdfs:label>
+	<rdfs:comment>La listériose est une infection grave, d’origine alimentaire, due à la bactérie Listeria monocytogenes. Elle peut entrainer une septicémie ou une infection du système nerveux central. Chez la femme enceinte, elle peut provoquer un avortement, un accouchement prématuré ou une infection néonatale grave. En France, la maladie reste rare (incidence de 5 à 6 cas par million d’habitants), mais mortelle dans 30 à 40% des cas survenant en dehors de la grossesse.
+</rdfs:comment>
+	<ex:hasSymptom>L’étude prospective nationale MONALISA menée au Centre national de référence Listeria, en lien avec Santé publique France, a permis de mieux préciser les signes cliniques de l’infection.
+Chez l’adulte, la maladie se traduit par une infection du sang (septicémie), voire du système nerveux central, qui se manifeste alors principalement par une méningo-encéphalite (c’est-à-dire une infection des méninges et du cerveau).
+Chez la femme enceinte, l’infection est en général sans conséquence pour la mère : elle peut passer inaperçue, prendre la forme de contractions, ou se traduire par un pic fébrile. En revanche, le nouveau-né infecté présente une infection sévère, souvent aggravée par la prématurité, qui peut combiner septicémie, infection pulmonaire, neurologique et parfois cutanée. Il existe un traitement antibiotique, d’autant plus efficace qu’il est administré rapidement. Cependant, l’évolution peut être fatale même en cas de traitement adapté et précoce.
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+<rdf:Description rdf:about="http://www.example.com/Flu">
+	<rdf:type rdf:resource="http://www.example.com/Disease"/>
+	<rdfs:label>MALADIE COVID-19 (NOUVEAU CORONAVIRUS)
+</rdfs:label>
+	<rdfs:comment>Une épidémie de pneumonies, décrite à l’époque comme d'allure virale de cause inconnue a émergé dans la ville de Wuhan (province de Hubei, Chine) en décembre 2019. Le 9 janvier 2020, la découverte d’un nouveau coronavirus a été annoncée officiellement par les autorités sanitaires chinoises et l’Organisation mondiale de la santé (OMS). D’abord appelé 2019-nCoV puis SARS-CoV-2, ce virus est différent du virus SARS-CoV responsable de l'épidémie de SRAS en 2003. Il est également différent du virus MERS-CoV responsable d’une épidémie évoluant depuis 2012 au Moyen-Orient. Ce nouveau virus est l'agent responsable de cette nouvelle maladie infectieuse respiratoire appelée Covid-19 (pour CoronaVIrus Disease 2019).
+</rdfs:comment>
+	<ex:hasSymptom>La durée de l'incubation est en moyenne de 5 jours, avec des extrêmes de 2 à 12 jours. L'installation des symptômes se fait progressivement sur plusieurs jours, contrairement à la grippe qui débute brutalement.
+Les premiers symptômes sont peu spécifiques : maux de tête, douleurs musculaires, fatigue. La fièvre et les signes respiratoires arrivent secondairement, souvent deux ou trois jours après les premiers symptômes.
+Dans les premières études descriptives provenant de Chine, il s'écoule en moyenne une semaine entre l'apparition des premiers symptômes et l'admission à l'hôpital à la phase d'état de la maladie. A ce stade, les symptômes associent fièvre, toux, douleurs thoraciques et gêne respiratoire et la réalisation d'un scanner thoracique montre presque toujours une pneumonie touchant les deux poumons. D'autres signes cliniques ont été décrits depuis les premières études : des signes d'atteinte du système nerveux central s'exprimant en particulier chez les personnes âgées sous la forme d'une désorientation ; une perte du goût ou/et de l'odorat, qui survient chez 30 à 50% des adultes infectés, avec une prédominance féminine, est très évocatrice du diagnostic de Covid-19.
+La gravité des signes cliniques nécessite le maintien à l'hôpital d'environ 20% des malades et 5% nécessitent une admission en réanimation. Les formes les plus graves sont observées principalement chez des personnes vulnérables en raison de leur âge (plus de 70 ans) ou de maladies associées, en particulier l'obésité.
+Des études observationnelles privilégiées ainsi que des travaux de modélisation ont montré que l'infection peut être asymptomatique ou paucisymptomatique (entrainer pas ou peu de manifestations cliniques) chez 30 à 60 % des sujets infectés, en particulier chez les jeunes enfants (moins de 12 ans).
+</ex:hasSymptom>
+  </rdf:Description>
+
+
+
+
+<!--FIN BABACAR-->
+</rdf:RDF>
+

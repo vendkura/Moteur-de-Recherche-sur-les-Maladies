@@ -3,7 +3,6 @@ from .import views
 
 #URL conf module
 urlpatterns = [
-    path('index/', views.gotoindex),
-    path('testin/', views.my_view),
-    path('dialogflow/', views.dialog_flow_Prompt),
+    path('disease/',views.disease_info_view),
+    path('disease_info/',views.disease_info_viewV2),
 ]

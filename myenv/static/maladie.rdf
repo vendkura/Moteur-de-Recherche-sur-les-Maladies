@@ -1,0 +1,49 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <!-- Ontologie -->
+  <owl:Ontology rdf:about="http://www.example.com/diseases">
+    <rdfs:label>Diseases Ontology</rdfs:label>
+    <dc:description>An ontology for describing human diseases.</dc:description>
+  </owl:Ontology>
+
+  <!-- Classe de maladie -->
+  <owl:Class rdf:about="http://www.example.com/diseases#Disease">
+    <rdfs:label>Disease</rdfs:label>
+    <rdfs:comment>A human disease.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Propriétés -->
+  <owl:ObjectProperty rdf:about="http://www.example.com/diseases#hasSymptom">
+    <rdfs:label>hasSymptom</rdfs:label>
+    <rdfs:comment>Indicates the symptoms associated with a disease.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.example.com/diseases#Disease"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:ObjectProperty>
+
+  <!-- Instances de maladie -->
+  <rdf:Description rdf:about="http://www.example.com/diseases#Flu">
+    <rdf:type rdf:resource="http://www.example.com/diseases#Disease"/>
+    <rdfs:label>Flu</rdfs:label>
+    <dc:description>Influenza, commonly known as the flu, is a viral infection that affects the respiratory system.</dc:description>
+    <hasSymptom>Cough</hasSymptom>
+    <hasSymptom>Fever</hasSymptom>
+    <hasSymptom>Runny nose</hasSymptom>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.example.com/diseases#Diabetes">
+    <rdf:type rdf:resource="http://www.example.com/diseases#Disease"/>
+    <rdfs:label>Diabetes</rdfs:label>
+    <dc:description>Diabetes mellitus is a chronic metabolic disorder characterized by high blood sugar levels.</dc:description>
+    <hasSymptom>Frequent urination</hasSymptom>
+    <hasSymptom>Increased thirst</hasSymptom>
+    <hasSymptom>Unexplained weight loss</hasSymptom>
+  </rdf:Description>
+
+  <!-- Autres instances de maladie -->
+  <!-- ... -->
+
+</rdf:RDF>
+

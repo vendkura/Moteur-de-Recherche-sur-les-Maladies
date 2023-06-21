@@ -25,7 +25,7 @@
         <div class="d-lg-block" style="min-width: 11em;">
             <div class="d-lg-block container text-center mb-5 mt-8 mx-1" style="margin-left: 1em;">
                 <a class="" href="/">
-                    <img alt="..." src="/_next/static/media/phind_v2.45c8fa3b.svg" width="75" height="36" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
+                    <img alt="..." src="{% static 'logo.png' %}" width="auto" height="150" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
                 </a>
             </div>
             <div>
@@ -33,34 +33,18 @@
                     <div class="row">
                         <div class="table-responsive" style="max-height: 70vh;">
                             <table class="table darkmode-semi-light table-flush table-hover text-always-white border border-history-panel mb-7">
+                                <caption class="text-center mb-3" style=" caption-side: top;
+                                  ">HISTORIQUE
+                                  </caption>
                                 <tbody>
+                                    {% if disease_info %}
                                     <tr class=" table-active" style="cursor: pointer;">
                                         <td class="">
                                             <div class="row">
                                                 <div class="col-1 fs-5">
-
+                                                    
                                                 </div>
                                                 <div class="col-4 ">
-                                                    <i class="fe fe-edit m-1"></i>
-                                                    <i class="fe fe-trash m-1"></i>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-1 fs-5">
-
-                                                </div>
-                                                <div class="fs-6 col-10" style="overflow: hidden;">What is PWA?</div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr class=" " style="cursor: pointer;">
-                                        <td class="">
-                                            <div class="row">
-                                                <div class="col-1 fs-5">
-
-                                                </div>
-                                                <div class="col-4 ">
-
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -68,11 +52,13 @@
 
                                                 </div>
                                                 <div class="fs-6 col-10" style="overflow: hidden;">
-                                                    how to have a website preview on vscode
+                                                    <h3>{{ disease_info.Label }}</h3>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
+                                    {% endif %}
+                                    
                                                 
                                     </tbody>
                                 </table>
@@ -89,34 +75,15 @@
             <div class="col-lg-10">
                 <div class="row mt-6 mx-auto">
                     <div class=" container mb-5 mt-2 ">
-                        <a class="mx-auto" href="/index">
+                        <!-- <a class="mx-auto" href="/index">
                             <img alt="..." src="{% static 'logo.png' %}" width="100" height="100" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
-                        </a>
-                        <h1 class="mb-8  mt-5 mx-auto">Search Engine for<!-- --> <span class="text-underline-warning">Diseases</span>.</h1>
+                        </a> -->
+                        <h1 class="mb-8  mt-5 mx-auto">Moteur de Recherche de<!-- --> <span class="text-underline-warning">Maladies</span>.</h1>
+                        <sub></sub>
                     </div>
                       <!-- DEBUT Affichage de la question poser par l'utilisateur et le banner des boutons pour la recherche   -->
                     <div class="col-lg-8 col-xl-7">
                         <div class="container-xl">
-                            <!-- <form class="mb-3">
-                                <div class="input-group shadow border-multicolor darkmode-light">
-                                    <textarea tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="q" class="form-control bg-white darkmode-light searchbox-textarea" rows="1" placeholder="" aria-label="" style="resize: none; height: 53px;">
-                                        QUESTION ?
-                                    </textarea>
-                                    <div class="btn-group shadow-none bg-white">
-                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
-                                            <i class="fe fe-x text-black"></i>
-                                        </button>
-                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
-                                            <i class="fe fe-chevron-down text-black">
-
-                                            </i>
-                                        </button>
-                                        <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="submit">
-                                            <i class="fe fe-search text-black"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </form> -->
                             <div class="mt-4" style="display: flex; justify-content: space-between;">
                                
                                 <div class="">
@@ -142,8 +109,10 @@
                         <div class="container-xl">
                             <div class="mb-3 mx-auto">
                                 <h1 class="fw-bold fs-3 mb-3 text-center " style="white-space: pre-wrap; overflow-wrap: break-word; cursor: pointer;">
-                                    <!-- QUESTION -->
-                                    {{input_value}}
+                                    <!-- QUESTION POSER PAR LE UTILISATEUR -->
+                                    {% if disease_info %}
+                                        <h2>{{ disease_info.Label }}</h2>
+                                    {% endif %}
                                 </h1>
                             </div>
                         </div>
@@ -151,7 +120,8 @@
                     <div class="col-lg-4 col-xl-4">
                         <div class="container-xl">
                             <span class="fw-bold fs-3 mb-3" style="white-space: pre-wrap; overflow-wrap: break-word; cursor: pointer;">
-                                DIALOGFLOW
+                                <img src="{% static 'dialogflow-logo.png' %}" width="auto" height="100" decoding="async" data-nimg="1" class="img darkmode-img" style="color: transparent;">
+                                
                             </span>
                         </div>
                     </div>
@@ -166,11 +136,19 @@
                                         </u>
                                     </i>
                                 </h5>
+                                {% if disease_info %}
                                 <div class="fs-5">
                                     <p class="text-danger mb-3">
-                                       <strong></strong> 
+                                        
+                                    <p class="text-font-weight-bold">
+                                        <span><u><b> Definition et description:</b> </u> </span>  {{ disease_info.Comment }}</p>
+                                    {% if disease_info.Symptom %}
+                                        <p>Symptomes: {{ disease_info.Symptom }}</p>
+                                    {% endif %}
+                                        
                                     </p>
                                 </div>
+                                {% endif %}
                                    
                                 </div>
 
@@ -197,7 +175,7 @@
                                                                     <div class="input-group shadow border-multicolor darkmode-light">
                                                                         <!-- <textarea  rows="1" placeholder="Posez une question" aria-label="Posez une question" style="resize: none; height: 53px;">
                                                                         </textarea> -->
-                                                                        <input id="input_value" name="input_value" tabindex="0" class="form-control bg-white darkmode-light searchbox-textarea" style="height: 53px;">
+                                                                        <input id="input_value" name="disease_name" value="{{ disease_name }}" required tabindex="0" class="form-control bg-white darkmode-light searchbox-textarea" style="height: 53px;">
                                                                         <div class="btn-group shadow-none bg-white">
                                                                             <button tabindex="-1" class="btn darkmode-light text-black p-2 rounded-0" type="button">
                                                                                 <i class="fe fe-chevron-down text-black"></i>
@@ -237,40 +215,14 @@
                                                                 <div class="fs-5 mt-3 text-center">
                                                                     <p class="text-black mb-3">
                                                                         <!-- PWAs have several key features and benefits: -->
-                                                                        <span class="">
-                                                                            {{fulfillment_text }}
-                                                                            
-                                                                        </span> 
+                                                                        {% if fulfillment_text %}
+                                                                            <p>{{ fulfillment_text }}</p>
+                                                                        {% endif %}
                                                                     </p>
                                                                 </div>
                                                                
-
-                                                                <!-- <div class="pb-2" style="opacity: 1;">
-                                                                    <div class="d-flex"><span style="margin-right: 10px;">
-                                                                        <img src="src.target.com" alt="favicon-www.techtarget.com" width="16" height="16">
-                                                                    </span>
-                                                                    <span class="fs-6 text-gray-600 text-truncate d-inline align-self-center">www.srctarget.com &gt; Header of the question</span>
-                                                                </div>
-                                                                <a target="_blank" class="mb-0" rel="noreferrer" href="src.target.com/fullLink">
-                                                                    Asked question that fit to the page? | Definition from TechTarget
-                                                                </a>
-                                                               
-                                                                </div> -->
                                                             </div>
                                                             <div>
-                                                               
-                                                            <!-- <div class="row mt-2">
-                                                                <div class="col-6">
-                                                                    <ul class="pagination">
-                                                                        <li class="page-item active">
-                                                                            <button class="page-link btn-light" type="button">1</button>
-                                                                        </li>
-                                                                        <li class="page-item ">
-                                                                            <button class="page-link btn-light" type="button">2</button>
-                                                                        </li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div> -->
 
                                                         </div>
                                                     </div>
